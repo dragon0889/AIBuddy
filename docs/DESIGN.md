@@ -1,6 +1,6 @@
 # Thiết kế cơ bản hệ thống (Basic Design) – v0.1
 
-Phụ thuộc: [`PLAN.md`](PLAN.md), SRS gốc, bổ sung ADD-01…ADD-11. Phạm vi: **MVP**, có chỗ chừa cho Pha 2–3.
+Phụ thuộc: [`PLAN.md`](PLAN.md), SRS gốc, [`SRS_ADDENDUM.md`](SRS_ADDENDUM.md) (ADD-01…ADD-11). Triển khai đầu tiên: **tại nhà**. Phạm vi: **MVP**, có chỗ chừa cho Pha 2–3.
 
 ## 1. Nguyên tắc thiết kế
 
@@ -40,9 +40,11 @@ Hạ tầng ngoài: Email/SMS provider, CDN, KMS (khóa mã hóa)
 ### 3.1 Dual Consent (FR-010) – máy trạng thái tài khoản
 
 ```
-REGISTERED ──(tính tuổi)──► age ≥ 16 ──► ACTIVE
-        └────► age < 16 ──► PENDING_PARENT_CONSENT
-PENDING_PARENT_CONSENT ──(trẻ ≥7 bấm "Con đồng ý" + phụ huynh nhập OTP)──► ACTIVE
+Phụ huynh: REGISTERED ──(Email/SMS OTP)──► GUARDIAN_VERIFIED
+Hồ sơ con (do phụ huynh tạo, nhập tháng/năm sinh):
+   age ≥ 16 ──► (tài khoản độc lập, ngoài trọng tâm MVP) ──► ACTIVE
+   age < 16 ──► PENDING_PARENT_CONSENT
+PENDING_PARENT_CONSENT ──(phụ huynh đọc điều khoản + xác nhận OTP; trẻ ≥7 bấm "Con đồng ý")──► ACTIVE
 PENDING_PARENT_CONSENT ──(quá hạn 7 ngày)──► EXPIRED (xóa dữ liệu)
 ACTIVE ──(phụ huynh thu hồi / yêu cầu xóa)──► ERASURE_REQUESTED ──(≤72h)──► ERASED
 ```
@@ -76,8 +78,8 @@ Pipeline chạy trong Web Worker: `getUserMedia` → khung hình tensor (RAM) �
 XP theo *hành vi học*: hoàn thành bài, thử nghiệm với dữ liệu mới, tìm lỗi của AI, cải thiện model sau khi phân tích sai, giúp bạn (nhóm). Huy hiệu theo outcome (ví dụ "Thám tử kiểm chứng"). Không streak ở L1; từ L2 streak là tùy chọn, có "ngày nghỉ miễn phí". Giới hạn thời gian mặc định do phụ huynh/giáo viên cấu hình. Không đếm ngược gây áp lực, không so sánh xếp hạng công khai giữa trẻ.
 
 ### 3.5 Lớp học, phụ huynh
-- **Classroom:** mã lớp 6 ký tự, học sinh đăng nhập bằng mã lớp + biểu tượng/PIN (thiết bị dùng chung), giáo viên duyệt. Bài giao có rubric; chấm theo tiêu chí; báo cáo outcome theo lớp; cờ "cần hỗ trợ".
-- **Family:** liên kết phụ huynh–con qua Dual Consent; xem nhật ký học, đặt giới hạn thời gian, thu hồi đồng ý, yêu cầu xóa; nội dung "nói chuyện với con về AI".
+- **Family (MVP, trọng tâm):** phụ huynh là chủ tài khoản, tạo nhiều hồ sơ con; thiết bị dùng chung chuyển hồ sơ bằng biểu tượng + PIN, khóa khi hết giờ; xem nhật ký học, báo cáo outcome theo tuần, đặt giới hạn thời gian, thu hồi đồng ý, yêu cầu xóa; hướng dẫn "nói chuyện với con về AI"; hoạt động *Học cùng con* (câu hỏi gợi mở sau mỗi bài).
+- **Classroom (Pha 2):** mã lớp 6 ký tự, đăng nhập bằng mã lớp + biểu tượng/PIN, giáo viên duyệt, bài giao có rubric, báo cáo theo lớp. Schema DB đã chừa chỗ (`schools`, `classes`) nhưng module chưa triển khai ở MVP.
 
 ### 3.6 Erasure (FR-011) – crypto-shredding
 Dữ liệu cá nhân của mỗi học sinh mã hóa bằng *data key* riêng (envelope encryption qua KMS). Xóa = hủy data key + xóa bản ghi chính; bản sao lưu còn lại không giải mã được. Job theo dõi SLA 72h, cảnh báo ở 48h, ghi chứng từ xóa vào audit log (không chứa PII).
@@ -107,11 +109,12 @@ Dữ liệu cá nhân của mỗi học sinh mã hóa bằng *data key* riêng (
 
 | Nhóm | Endpoint tiêu biểu |
 |---|---|
-| Auth | `POST /auth/register`, `/auth/login`, `/auth/class-login`, `/auth/2fa/verify` |
+| Auth | `POST /auth/register`, `/auth/login`, `/auth/profile-switch` (biểu tượng+PIN), `/auth/2fa/verify` (admin); Pha 2: `/auth/class-login` |
 | Consent | `POST /consent/guardian/invite`, `POST /consent/child/agree`, `POST /consent/guardian/verify-otp`, `POST /consent/withdraw` |
 | Content | `GET /courses`, `GET /lessons/:id`, `GET /outcomes` |
 | Progress | `POST /progress/steps`, `GET /me/progress`, `POST /assessments/:id/submit` |
-| Classroom | `POST /classes`, `POST /classes/:id/approve`, `POST /assignments`, `POST /submissions/:id/score` |
+| Family | `POST /children`, `GET /children/:id/weekly-summary`, `GET /children/:id/co-learning-activities` |
+| Classroom (Pha 2) | `POST /classes`, `POST /classes/:id/approve`, `POST /assignments`, `POST /submissions/:id/score` |
 | Family | `GET /children/:id/report`, `PUT /children/:id/screen-time`, `POST /children/:id/erase` |
 | Admin | `POST /admin/lessons`, `GET /admin/audit-logs`, `GET /admin/compliance-report` |
 

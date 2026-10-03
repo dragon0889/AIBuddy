@@ -1,7 +1,7 @@
 # Kế hoạch phát triển – Nền tảng Giáo dục AI cho học sinh Tiểu học & THCS
 
 > Nguồn: `Thiết kế SRS App AI.docx` (IEEE 830 / ISO 29148). Tài liệu này phân tích SRS và đề xuất kế hoạch triển khai.
-> Trạng thái: **bản nháp v0.2** – đã bổ sung các khoảng trống sư phạm (mục 3A). Thiết kế cơ bản: [`DESIGN.md`](DESIGN.md); mục tiêu học tập & đánh giá: [`LEARNING_OUTCOMES.md`](LEARNING_OUTCOMES.md).
+> Trạng thái: **bản nháp v0.3** – triển khai **tại nhà (phụ huynh là kênh chính)**; đã bổ sung các khoảng trống sư phạm (mục 3A); nguồn giáo trình: [`CURRICULUM_SOURCES.md`](CURRICULUM_SOURCES.md); phụ lục SRS: [`SRS_ADDENDUM.md`](SRS_ADDENDUM.md). Thiết kế cơ bản: [`DESIGN.md`](DESIGN.md); mục tiêu học tập & đánh giá: [`LEARNING_OUTCOMES.md`](LEARNING_OUTCOMES.md).
 > Cần xác nhận các mục ở phần 8 trước khi bắt đầu Sprint 0.
 
 ## 1. Quyết định đã chốt
@@ -61,14 +61,19 @@ SRS gốc dạy *AI hoạt động thế nào* (AI literacy) nhưng chưa dạy 
 | ADD-03 | **Sandbox chatbot an toàn** | Học sinh Level 2–3 trò chuyện với LLM qua Safety Moderation Proxy trong bài tập có hướng dẫn (so sánh câu trả lời, sửa prompt, tìm lỗi). Có nhật ký cho giáo viên/phụ huynh, giới hạn chủ đề & độ dài, chặn PII | Pha 2 (đầu) |
 | ADD-04 | **Learning Outcomes & Assessment** | Mục tiêu học tập đo được (Bloom) cho từng bài, rubric dự án, bài kiểm tra đầu/cuối (pre/post), chỉ số hiểu sai (misconception) | MVP |
 | ADD-05 | **Gamification thiết kế lại (sửa FR-002)** | Thưởng *quá trình* (đặt câu hỏi, tìm lỗi mô hình, cải thiện dữ liệu thiên lệch), không chỉ "accuracy >80%". Bỏ streak ở Level 1; không dark pattern/FOMO; giới hạn thời gian mặc định | MVP |
-| ADD-06 | **Hỗ trợ giáo viên** | Giáo án theo chương trình 2018/môn Tin học, hoạt động offline, câu hỏi thảo luận, gợi ý học sinh tụt lại, tài liệu tập huấn | MVP (cơ bản) → Pha 2 |
-| ADD-07 | **Đồng hành của phụ huynh** | Hướng dẫn "nói chuyện với con về AI", hoạt động làm cùng con, cách xử lý khi con dùng AI ngoài app | Pha 2 (MVP: nội dung tĩnh) |
+| ADD-06 | **Hỗ trợ giáo viên** | Giáo án theo chương trình 2018/môn Tin học, hoạt động offline, câu hỏi thảo luận, gợi ý học sinh tụt lại, tài liệu tập huấn | **Pha 2** (do triển khai tại nhà trước; MVP chỉ giữ cấu trúc nội dung tái sử dụng được) |
+| ADD-07 | **Đồng hành của phụ huynh (trọng tâm)** | Phụ huynh là chủ tài khoản; hướng dẫn "nói chuyện với con về AI", hoạt động *Học cùng con*, gợi ý câu hỏi sau mỗi bài, cách xử lý khi con dùng AI ngoài app, tóm tắt tuần | **MVP** |
 | ADD-08 | **An toàn nội dung số sớm** | Nhận biết nội dung AI tạo, deepfake, ảnh ghép, cách báo cáo/nhờ người lớn – dạng phù hợp tuổi, đưa vào từ Level 2 (PRJ-06 vẫn ở Level 3) | MVP (bài học) |
 | ADD-09 | **Level 1 tối giản công nghệ** | Lớp 1–2 ưu tiên unplugged và chạm/kéo thả; webcam/mic chỉ có khi phụ huynh bật và có người lớn cạnh | MVP |
-| ADD-10 | **Khả năng tiếp cận & công bằng** | Hỗ trợ khiếm thị/khiếm thính/dyslexia (đọc to, font dễ đọc, phụ đề), thiết bị yếu/mạng chậm, nhiều học sinh dùng chung máy (đăng nhập nhanh bằng mã lớp + biểu tượng) | MVP → Pha 2 |
-| ADD-11 | **Pilot & đo hiệu quả** | Pilot 1–2 lớp thật, user testing theo từng độ tuổi từ Sprint 4, đo pre/post và misconception trước khi mở rộng | MVP (Sprint 13) |
+| ADD-10 | **Khả năng tiếp cận & công bằng** | Hỗ trợ khiếm thị/khiếm thính/dyslexia (đọc to, font dễ đọc, phụ đề), thiết bị yếu/mạng chậm, nhiều con dùng chung một thiết bị gia đình (chuyển hồ sơ bằng biểu tượng + PIN do phụ huynh đặt) | MVP → Pha 2 |
+| ADD-11 | **Pilot & đo hiệu quả** | Pilot **10–20 gia đình** (trẻ 6–14 tuổi), user testing theo từng độ tuổi từ Sprint 4, đo pre/post và misconception trước khi mở rộng | MVP (Sprint 13) |
 
-**Giả định về đối tượng triển khai đầu tiên:** *lớp học ở trường* (giáo viên là kênh chính, phụ huynh là kênh phụ). Chưa được xác nhận – xem câu hỏi Q9.
+**Đối tượng triển khai đầu tiên (đã chốt):** *học tại nhà*. Hệ quả thiết kế:
+- Phụ huynh đăng ký trước, xác thực rồi **tạo hồ sơ con** (đơn giản hóa Dual Consent; trẻ vẫn bấm "Con đồng ý" từ 7 tuổi).
+- Cổng giáo viên/mã lớp (FR-009) và đăng nhập theo lớp lùi sang **Pha 2**; CMS và cấu trúc nội dung vẫn thiết kế để dùng lại cho lớp học.
+- Không có giáo viên để hỗ trợ → nội dung phải *tự đủ*: hướng dẫn phụ huynh ngắn gọn, hoạt động làm cùng con, phản hồi tự động rõ ràng.
+- Thiết bị thường dùng chung trong gia đình → chuyển hồ sơ nhanh (biểu tượng + PIN), phiên ngắn, khóa hồ sơ khi hết giờ.
+- Động lực học tự giác → gamification nhẹ nhàng, phần thưởng quá trình, không gây nghiện (ADD-05).
 
 ## 4. Kiến trúc đề xuất
 
@@ -79,7 +84,7 @@ SRS gốc dạy *AI hoạt động thế nào* (AI literacy) nhưng chưa dạy 
 └───────────────┬────────────────────────────────────────────────────────────────┘
                 │ HTTPS/TLS 1.3 (chỉ metadata, tiến độ, model nếu được phép)
 ┌───────────────▼──────────── API Gateway / BFF (NestJS) ────────────────────────┐
-│ Auth & Consent │ Content │ Progress & Gamification │ Classroom │ Parent │ Admin │
+│ Auth & Consent │ Content │ Progress & Gamification │ Family │ Admin │ (Pha 2: Classroom) │
 │ Audit log │ Erasure engine │ (sau MVP) LLM Moderation Proxy, LTI 1.3            │
 └───────┬──────────────────┬──────────────────┬────────────────────┬─────────────┘
    PostgreSQL           Redis (cache/queue)  Object storage (nội dung)  Email/SMS provider
@@ -95,7 +100,7 @@ SRS gốc dạy *AI hoạt động thế nào* (AI literacy) nhưng chưa dạy 
 | **Pha 2** | Mở rộng nội dung & lớp học | Tháng 7–9 | **Sandbox chatbot an toàn (ADD-03, đầu pha)**, hỗ trợ phụ huynh (ADD-07), âm thanh/văn bản ML, Python sandbox (FR-007), PRJ-03…05, LTI 1.3, adaptive learning đầy đủ, eKYC |
 | **Pha 3** | Quy mô & mở rộng | Tháng 10–12 | PRJ-06, mở rộng nội dung Level 3, load test 50k CCU, app đóng gói, DPIA định kỳ, đánh giá hiệu quả học tập sau pilot |
 
-**MVP gồm:** FR-010, FR-011, FR-001, FR-002 (bản thiết kế lại – ADD-05), FR-004 (ảnh), FR-005, FR-006, FR-008 (bản cơ bản), FR-009 (bản cơ bản), Admin tối thiểu; ADD-01/02/04/08/09 và nội dung ADD-06; dự án PRJ-01, PRJ-02; Level 1 + Level 2 (lớp 1–5) với 10–14 bài học mẫu, trong đó ít nhất 1/3 thuộc trụ cột AI có trách nhiệm.
+**MVP gồm:** FR-010, FR-011, FR-001, FR-002 (bản thiết kế lại – ADD-05), FR-004 (ảnh), FR-005, FR-006, FR-008 (mở rộng thành trọng tâm – Family: ADD-07), Admin tối thiểu; ADD-01/02/04/07/08/09/10; dự án PRJ-01, PRJ-02; Level 1 + Level 2 (lớp 1–5) với 10–14 bài học mẫu, trong đó ít nhất 1/3 thuộc trụ cột AI có trách nhiệm.
 **Chưa trong MVP:** FR-007, FR-003 đầy đủ (chỉ micro-quiz + gợi ý đơn giản), âm thanh/văn bản, chatbot LLM trực tiếp (ADD-03), LTI, eKYC, PRJ-03…06.
 
 ## 6. Lộ trình MVP (13 sprint × 2 tuần)
@@ -112,10 +117,10 @@ SRS gốc dạy *AI hoạt động thế nào* (AI literacy) nhưng chưa dạy 
 | **7** | **ML Trainer (FR-005)** | Huấn luyện + biểu đồ Accuracy/Loss, việt hóa thuật ngữ, ≤15s, thử nghiệm mô hình trực tiếp |
 | **8** | **Block Coding (FR-006)** | Scratch Blocks + khối ML, sân chơi nhân vật; PRJ-01 hoàn chỉnh |
 | **9** | PRJ-02 + Micro-quiz (FR-003 cơ bản) + Tìm lỗi AI | Pose/Pattern, Oẳn Tù Tì tự học; micro-quiz, gợi ý bài bổ trợ; hoạt động *Tìm lỗi của AI* (ADD-02); bài nhận biết nội dung AI tạo (ADD-08); 4–6 bài Level 2 |
-| **10** | Phụ huynh (FR-008) | Nhật ký học tập, giới hạn thời gian, báo cáo năng lực, thu hồi đồng ý, trang hướng dẫn "nói chuyện với con về AI" (nội dung tĩnh) |
-| **11** | **FR-011 Erasure** + Giáo viên (FR-009) | Xóa ≤72h (crypto-shredding), job & kiểm chứng; mã lớp + đăng nhập biểu tượng, duyệt học sinh, giao bài, chấm theo rubric, giáo án & hoạt động offline (ADD-06) |
+| **10** | Phụ huynh (FR-008, ADD-07) | Dashboard phụ huynh, hồ sơ nhiều con + chuyển hồ sơ (biểu tượng + PIN), giới hạn thời gian, báo cáo năng lực/tuần, thu hồi đồng ý, hướng dẫn "nói chuyện với con về AI", hoạt động *Học cùng con* |
+| **11** | **FR-011 Erasure** + Onboarding gia đình | Xóa ≤72h (crypto-shredding), job & kiểm chứng; luồng onboarding phụ huynh→con, bài kiểm tra đầu vào (pre-test), email tóm tắt tuần, thông báo nhắc dịu nhẹ |
 | **12** | Offline & hiệu năng & bảo mật | Service Worker cache bài lý thuyết, tải trang ≤2s, mã hóa AES-256/TLS 1.3, pen-test cơ bản, load test 5k CCU |
-| **13** | Ổn định & pilot | **Pilot 1–2 lớp thật, pre/post test + misconception survey (ADD-11)**, sửa lỗi, tài liệu vận hành, báo cáo tuân thủ NĐ13, báo cáo hiệu quả học tập |
+| **13** | Ổn định & pilot | **Pilot 10–20 gia đình, pre/post test + misconception survey (ADD-11)**, sửa lỗi, tài liệu vận hành, báo cáo tuân thủ NĐ13, báo cáo hiệu quả học tập |
 
 **Phân công gợi ý (3 người):** (A) Tech lead/backend + compliance; (B) frontend + lesson/gamification; (C) ML/Edge AI + block coding. Người thứ 4 (nếu có): UI/UX + nội dung sư phạm. Cần cố vấn sư phạm AI4K12 và pháp lý bán thời gian.
 
@@ -136,7 +141,7 @@ SRS gốc dạy *AI hoạt động thế nào* (AI literacy) nhưng chưa dạy 
 | FR-006 | Block coding | ✔ | 8 |
 | FR-007 | Python sandbox | ✘ | Pha 2 |
 | FR-008 | Dashboard phụ huynh | cơ bản | 10 |
-| FR-009 | Cổng giáo viên | cơ bản | 11 |
+| FR-009 | Cổng giáo viên | ✘ | Pha 2 (lùi do triển khai tại nhà) |
 | FR-010 | Dual Consent | ✔ | 3 |
 | FR-011 | Xóa dữ liệu | ✔ | 11 |
 
@@ -151,11 +156,13 @@ SRS gốc dạy *AI hoạt động thế nào* (AI literacy) nhưng chưa dạy 
 7. **Xác minh pháp lý** số hiệu luật BVDLCN 2025 (R11) và tên PRJ-01 (R12).
 8. **Giáo viên:** tài khoản do nhà trường cấp thế nào ở MVP (mời qua email tên miền giáo dục, hay Admin duyệt thủ công)?
 
-9. **Đối tượng triển khai đầu tiên:** lớp học ở trường hay phụ huynh tự cho con học ở nhà? (đang giả định: trường học)
-10. **Chuyên gia sư phạm:** ai phụ trách Learning Outcomes, rubric và duyệt nội dung (cố vấn AI4K12/giáo viên Tin học)?
-11. **Chấp thuận các bổ sung ADD-01…ADD-11** để cập nhật lại SRS chính thức.
+9. ~~Đối tượng triển khai~~ → **Đã chốt: tại nhà.**
+10. ~~Chuyên gia sư phạm~~ → **Đã chốt: triển khai dần; trước mắt dùng giáo trình mở có sẵn** ([`CURRICULUM_SOURCES.md`](CURRICULUM_SOURCES.md)). Cần kiểm tra giấy phép (nhiều nguồn CC BY-NC/ND) trước khi tái sử dụng.
+11. ~~Bổ sung ADD~~ → **Đã chấp thuận**, xem [`SRS_ADDENDUM.md`](SRS_ADDENDUM.md).
+12. **Mô hình kinh doanh** (miễn phí/thuê bao/B2C) – ảnh hưởng đến thanh toán và giới hạn nội dung; chưa quyết.
+13. **Thiết bị mục tiêu của gia đình** (điện thoại, tablet, laptop?) – ảnh hưởng PWA/webcam/hiệu năng.
 
 ## 9. Bước tiếp theo
 
-1. Xác nhận phần 8 (đặc biệt Q9–Q11) và các giả định mục 5.
+1. Xác nhận phần 8 còn lại (Q1–Q8, Q12–Q13) và các giả định mục 5. Monorepo đã được khởi tạo (Sprint 0, xem `README.md`).
 2. Bắt đầu Sprint 0: khởi tạo monorepo, CI, và spike TF.js (Sprint 1) để giảm rủi ro kỹ thuật lớn nhất (huấn luyện ≤15s trên thiết bị yếu).
