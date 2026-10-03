@@ -3,6 +3,7 @@ import Fastify, { type FastifyInstance } from "fastify";
 import type { AppContext } from "./context.ts";
 import { AppError } from "./lib/errors.ts";
 import { loadAuth } from "./lib/session.ts";
+import { adminRoutes } from "./modules/admin.ts";
 import { authRoutes } from "./modules/auth.ts";
 import { familyRoutes } from "./modules/family.ts";
 import { learningRoutes } from "./modules/learning.ts";
@@ -44,5 +45,6 @@ export async function buildApp(ctx: AppContext): Promise<FastifyInstance> {
   authRoutes(app, ctx);
   familyRoutes(app, ctx);
   learningRoutes(app, ctx);
+  adminRoutes(app, ctx);
   return app;
 }

@@ -11,6 +11,8 @@ export class ContentStore {
   constructor(private dir: string) {}
 
   load(): this {
+    this.byId.clear();
+    this._assessments.clear();
     const readJson = (p: string) => JSON.parse(readFileSync(p, "utf8"));
     this._outcomes = outcomeCatalog.parse(readJson(join(this.dir, "outcomes/outcomes.json"))).outcomes;
     const ld = join(this.dir, "lessons");
