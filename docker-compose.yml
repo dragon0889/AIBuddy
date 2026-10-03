@@ -1,0 +1,15 @@
+# Môi trường dev cục bộ: PostgreSQL + Redis (chưa dùng ở Sprint 0–1).
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: aibuddy
+      POSTGRES_PASSWORD: aibuddy_dev_only
+      POSTGRES_DB: aibuddy
+    ports: ["5432:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+  redis:
+    image: redis:7
+    ports: ["6379:6379"]
+volumes:
+  pgdata:

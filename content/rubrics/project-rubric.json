@@ -1,0 +1,116 @@
+{
+  "version": "0.1",
+  "status": "draft - cần chuyên gia sư phạm duyệt",
+  "id": "project-rubric",
+  "title": {
+    "vi": "Rubric dự án AI (4 mức × 4 tiêu chí)"
+  },
+  "levels": [
+    {
+      "score": 1,
+      "name": {
+        "vi": "Bắt đầu"
+      }
+    },
+    {
+      "score": 2,
+      "name": {
+        "vi": "Đang tiến bộ"
+      }
+    },
+    {
+      "score": 3,
+      "name": {
+        "vi": "Đạt"
+      }
+    },
+    {
+      "score": 4,
+      "name": {
+        "vi": "Xuất sắc"
+      }
+    }
+  ],
+  "criteria": [
+    {
+      "id": "concept",
+      "name": {
+        "vi": "Hiểu khái niệm"
+      },
+      "descriptors": {
+        "1": {
+          "vi": "Chưa nêu được ý chính, cần người lớn gợi ý nhiều"
+        },
+        "2": {
+          "vi": "Nêu được ý chính nhưng còn nhầm lẫn"
+        },
+        "3": {
+          "vi": "Giải thích đúng bằng lời của mình"
+        },
+        "4": {
+          "vi": "Giải thích đúng và lấy được ví dụ mới"
+        }
+      }
+    },
+    {
+      "id": "data",
+      "name": {
+        "vi": "Dữ liệu"
+      },
+      "descriptors": {
+        "1": {
+          "vi": "Ít mẫu, nhãn lẫn lộn"
+        },
+        "2": {
+          "vi": "Đủ mẫu nhưng thiếu đa dạng"
+        },
+        "3": {
+          "vi": "Mẫu đủ và đa dạng, nhãn đúng"
+        },
+        "4": {
+          "vi": "Chủ động tìm và bổ sung mẫu còn thiếu"
+        }
+      }
+    },
+    {
+      "id": "evaluate",
+      "name": {
+        "vi": "Đánh giá và cải thiện mô hình"
+      },
+      "descriptors": {
+        "1": {
+          "vi": "Không thử lại mô hình"
+        },
+        "2": {
+          "vi": "Thử mô hình nhưng không tìm lý do sai"
+        },
+        "3": {
+          "vi": "Tìm được mẫu sai và sửa dữ liệu"
+        },
+        "4": {
+          "vi": "Giải thích nguyên nhân sai và chứng minh cải thiện"
+        }
+      }
+    },
+    {
+      "id": "ethics",
+      "name": {
+        "vi": "Cân nhắc đạo đức và an toàn"
+      },
+      "descriptors": {
+        "1": {
+          "vi": "Chưa nghĩ tới tác động"
+        },
+        "2": {
+          "vi": "Nêu được một rủi ro khi được hỏi"
+        },
+        "3": {
+          "vi": "Tự nêu rủi ro và cách giảm rủi ro"
+        },
+        "4": {
+          "vi": "Cân nhắc nhiều bên liên quan và đề xuất quy tắc dùng"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+/* Sinh từ tokens.ts – giữ đồng bộ bằng test. */
+:root {
+  --ab-bg: #fffaf0; --ab-text: #1f2937; --ab-primary: #2563eb; --ab-on-primary: #ffffff;
+  --ab-success: #15803d; --ab-warning: #b45309; --ab-danger: #b91c1c;
+  --ab-font-size: 21.33px; --ab-min-target: 56px; --ab-radius: 20px;
+  font-family: "Atkinson Hyperlegible", "Nunito", system-ui, sans-serif;
+}
+[data-level="l1"] { --ab-font-size: 26.67px; --ab-min-target: 56px; --ab-radius: 20px; }
+[data-level="l2"] { --ab-font-size: 21.33px; --ab-min-target: 48px; --ab-radius: 14px; }
+[data-level="l3"] { --ab-font-size: 18.67px; --ab-min-target: 44px; --ab-radius: 10px; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+body { background: var(--ab-bg); color: var(--ab-text); font-size: var(--ab-font-size); }
+button, [role="button"], a.ab-btn { min-height: var(--ab-min-target); min-width: var(--ab-min-target); border-radius: var(--ab-radius); }

@@ -1,0 +1,286 @@
+{
+  "version": "0.1",
+  "status": "draft - cần chuyên gia sư phạm duyệt",
+  "outcomes": [
+    {
+      "id": "PER.1.1",
+      "pillar": "perception",
+      "level": 1,
+      "statement": {
+        "vi": "Nêu được máy tính 'nhìn' bằng camera và 'nghe' bằng micro, khác với mắt và tai của người"
+      },
+      "bloom": "remember",
+      "evidence": "Quiz hình ảnh"
+    },
+    {
+      "id": "PER.2.1",
+      "pillar": "perception",
+      "level": 2,
+      "statement": {
+        "vi": "Giải thích ảnh được máy tính lưu thành các ô điểm ảnh (pixel) có số"
+      },
+      "bloom": "understand",
+      "evidence": "Hoạt động ghép pixel + quiz"
+    },
+    {
+      "id": "PER.3.1",
+      "pillar": "perception",
+      "level": 3,
+      "statement": {
+        "vi": "Mô tả cách tín hiệu tương tự được số hóa (lấy mẫu) và ảnh hưởng đến chất lượng"
+      },
+      "bloom": "analyze",
+      "evidence": "Bài thực hành + câu hỏi ngắn"
+    },
+    {
+      "id": "REP.1.1",
+      "pillar": "representation",
+      "level": 1,
+      "statement": {
+        "vi": "Làm theo và tự nghĩ các bước 'nếu… thì…' để ra quyết định đơn giản"
+      },
+      "bloom": "apply",
+      "evidence": "Trò chơi unplugged"
+    },
+    {
+      "id": "REP.2.1",
+      "pillar": "representation",
+      "level": 2,
+      "statement": {
+        "vi": "Đọc và vẽ một cây quyết định nhỏ để phân loại đồ vật"
+      },
+      "bloom": "apply",
+      "evidence": "Sản phẩm cây quyết định"
+    },
+    {
+      "id": "REP.3.1",
+      "pillar": "representation",
+      "level": 3,
+      "statement": {
+        "vi": "Xây dựng đồ thị tri thức nhỏ và dùng nó để trả lời câu hỏi"
+      },
+      "bloom": "create",
+      "evidence": "Dự án đồ thị + rubric"
+    },
+    {
+      "id": "LRN.1.1",
+      "pillar": "learning",
+      "level": 1,
+      "statement": {
+        "vi": "Nhận ra máy có thể học từ ví dụ do người đưa vào"
+      },
+      "bloom": "understand",
+      "evidence": "Hoạt động unplugged 'dạy robot'"
+    },
+    {
+      "id": "LRN.2.1",
+      "pillar": "learning",
+      "level": 2,
+      "statement": {
+        "vi": "Phân biệt 'viết luật' với 'học từ ví dụ'"
+      },
+      "bloom": "understand",
+      "evidence": "Phân loại tình huống"
+    },
+    {
+      "id": "LRN.2.2",
+      "pillar": "learning",
+      "level": 2,
+      "statement": {
+        "vi": "Thu thập và gán nhãn dữ liệu để huấn luyện một mô hình phân loại ảnh đơn giản"
+      },
+      "bloom": "apply",
+      "evidence": "Dự án PRJ-01/02 + rubric"
+    },
+    {
+      "id": "LRN.2.3",
+      "pillar": "learning",
+      "level": 2,
+      "statement": {
+        "vi": "Giải thích vì sao dữ liệu đa dạng làm mô hình tốt hơn và sửa mô hình sau khi tìm mẫu sai"
+      },
+      "bloom": "analyze",
+      "evidence": "Nhật ký 'Vì sao mô hình sai?'"
+    },
+    {
+      "id": "LRN.3.1",
+      "pillar": "learning",
+      "level": 3,
+      "statement": {
+        "vi": "Phân biệt học có giám sát, không giám sát và học tăng cường"
+      },
+      "bloom": "understand",
+      "evidence": "Quiz + ví dụ"
+    },
+    {
+      "id": "LRN.3.2",
+      "pillar": "learning",
+      "level": 3,
+      "statement": {
+        "vi": "Đánh giá mô hình bằng tập kiểm thử riêng và đọc kết quả đúng/sai"
+      },
+      "bloom": "evaluate",
+      "evidence": "Dự án + rubric"
+    },
+    {
+      "id": "INT.1.1",
+      "pillar": "interaction",
+      "level": 1,
+      "statement": {
+        "vi": "Nhận ra trợ lý giọng nói nghe lệnh và có thể nghe nhầm"
+      },
+      "bloom": "understand",
+      "evidence": "Trò chơi 'nghe nhầm'"
+    },
+    {
+      "id": "INT.2.1",
+      "pillar": "interaction",
+      "level": 2,
+      "statement": {
+        "vi": "Giải thích cách chatbot đoán ý định của câu nói đơn giản"
+      },
+      "bloom": "understand",
+      "evidence": "Phân loại câu theo ý định"
+    },
+    {
+      "id": "INT.3.1",
+      "pillar": "interaction",
+      "level": 3,
+      "statement": {
+        "vi": "Phân biệt chatbot quy tắc với mô hình ngôn ngữ lớn và nêu giới hạn của từng loại"
+      },
+      "bloom": "analyze",
+      "evidence": "So sánh có hướng dẫn"
+    },
+    {
+      "id": "SOC.1.1",
+      "pillar": "societal",
+      "level": 1,
+      "statement": {
+        "vi": "Hiểu AI do con người tạo ra, có thể giúp hoặc gây hại"
+      },
+      "bloom": "understand",
+      "evidence": "Câu chuyện + thảo luận cùng phụ huynh"
+    },
+    {
+      "id": "SOC.2.1",
+      "pillar": "societal",
+      "level": 2,
+      "statement": {
+        "vi": "Nhận ra dữ liệu thiên lệch có thể khiến AI đối xử không công bằng"
+      },
+      "bloom": "analyze",
+      "evidence": "Tìm thiên vị trong bộ ảnh mẫu"
+    },
+    {
+      "id": "SOC.2.2",
+      "pillar": "societal",
+      "level": 2,
+      "statement": {
+        "vi": "Kể được ví dụ AI giúp ích và ví dụ AI có rủi ro trong đời sống"
+      },
+      "bloom": "understand",
+      "evidence": "Thảo luận + sơ đồ"
+    },
+    {
+      "id": "SOC.3.1",
+      "pillar": "societal",
+      "level": 3,
+      "statement": {
+        "vi": "Phân tích rủi ro thiên vị, quyền riêng tư và việc làm của một ứng dụng AI cụ thể"
+      },
+      "bloom": "evaluate",
+      "evidence": "Bài phân tích ngắn"
+    },
+    {
+      "id": "RESP.1.1",
+      "pillar": "responsible_ai",
+      "level": 1,
+      "statement": {
+        "vi": "Biết AI là do người làm ra và có thể sai; biết hỏi người lớn khi nghi ngờ"
+      },
+      "bloom": "understand",
+      "evidence": "Unplugged + quan sát của phụ huynh"
+    },
+    {
+      "id": "RESP.1.2",
+      "pillar": "responsible_ai",
+      "level": 1,
+      "statement": {
+        "vi": "Không cho người lạ hoặc máy biết tên, địa chỉ, trường lớp của mình"
+      },
+      "bloom": "apply",
+      "evidence": "Tình huống chọn đáp án"
+    },
+    {
+      "id": "RESP.2.1",
+      "pillar": "responsible_ai",
+      "level": 2,
+      "statement": {
+        "vi": "Kiểm tra một câu trả lời của AI bằng cách đối chiếu ít nhất một nguồn khác"
+      },
+      "bloom": "apply",
+      "evidence": "Hoạt động 'Tìm lỗi của AI'"
+    },
+    {
+      "id": "RESP.2.2",
+      "pillar": "responsible_ai",
+      "level": 2,
+      "statement": {
+        "vi": "Viết lại câu hỏi (prompt) rõ hơn để nhận câu trả lời tốt hơn"
+      },
+      "bloom": "apply",
+      "evidence": "Bài mô phỏng / sandbox (Pha 2)"
+    },
+    {
+      "id": "RESP.2.3",
+      "pillar": "responsible_ai",
+      "level": 2,
+      "statement": {
+        "vi": "Không chia sẻ thông tin cá nhân với chatbot và nêu được lý do"
+      },
+      "bloom": "understand",
+      "evidence": "Tình huống chọn và giải thích"
+    },
+    {
+      "id": "RESP.2.4",
+      "pillar": "responsible_ai",
+      "level": 2,
+      "statement": {
+        "vi": "Nhận biết ảnh/video/giọng nói có thể do AI tạo và biết nhờ người lớn giúp kiểm tra"
+      },
+      "bloom": "understand",
+      "evidence": "Bài nhận biết nội dung AI tạo"
+    },
+    {
+      "id": "RESP.3.1",
+      "pillar": "responsible_ai",
+      "level": 3,
+      "statement": {
+        "vi": "Phân biệt dùng AI để học với nhờ AI làm hộ; đặt ra quy tắc dùng AI cho bản thân"
+      },
+      "bloom": "evaluate",
+      "evidence": "Bài luận ngắn + thảo luận"
+    },
+    {
+      "id": "RESP.3.2",
+      "pillar": "responsible_ai",
+      "level": 3,
+      "statement": {
+        "vi": "Nhận biết dấu hiệu deepfake/nội dung AI tạo và biết cách báo cáo"
+      },
+      "bloom": "analyze",
+      "evidence": "PRJ-06 / tình huống"
+    },
+    {
+      "id": "RESP.3.3",
+      "pillar": "responsible_ai",
+      "level": 3,
+      "statement": {
+        "vi": "Quyết định khi nào nên và không nên dùng AI cho một nhiệm vụ, nêu lý do"
+      },
+      "bloom": "evaluate",
+      "evidence": "Bài chọn công cụ có lý do"
+    }
+  ]
+}

@@ -78,3 +78,30 @@ export const lesson = z
 
 export type Lesson = z.infer<typeof lesson>;
 export type Step = z.infer<typeof step>;
+
+const bloom = z.enum(["remember", "understand", "apply", "analyze", "evaluate", "create"]);
+
+export const outcome = z.object({
+  id: outcomeId,
+  pillar,
+  level: z.union([z.literal(1), z.literal(2), z.literal(3)]),
+  statement: i18n,
+  bloom,
+  evidence: z.string().min(1),
+}).refine((o) => o.id.split(".")[1] === String(o.level), { message: "outcome id level must match level" });
+
+export const outcomeCatalog = z.object({ version: z.string(), status: z.string(), outcomes: z.array(outcome).min(1) });
+
+export const rubric = z.object({
+  version: z.string(),
+  id: z.string(),
+  title: i18n,
+  levels: z.array(z.object({ score: z.number().int(), name: i18n })).length(4),
+  criteria: z.array(z.object({ id: z.string(), name: i18n, descriptors: z.record(z.string(), i18n) })).min(1),
+}).superRefine((r, ctx) => {
+  for (const c of r.criteria) for (const l of r.levels) {
+    if (!c.descriptors[String(l.score)]) ctx.addIssue({ code: "custom", message: `criterion ${c.id} missing descriptor for score ${l.score}` });
+  }
+});
+
+export type Outcome = z.infer<typeof outcome>;
