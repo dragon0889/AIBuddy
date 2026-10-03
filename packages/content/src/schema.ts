@@ -105,3 +105,28 @@ export const rubric = z.object({
 });
 
 export type Outcome = z.infer<typeof outcome>;
+
+/** Bài đánh giá (pre/post/micro/misconception) – ADD-04. */
+export const assessment = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/),
+  kind: z.enum(["pre", "post", "micro", "misconception"]),
+  level: z.union([z.literal(1), z.literal(2), z.literal(3)]),
+  title: i18n,
+  items: z.array(z.object({
+    id: z.string(),
+    pillar,
+    outcome: outcomeId.optional(),
+    prompt: i18n,
+    options: z.array(z.object({ text: i18n, correct: z.boolean() })).min(2),
+    /** Cho khảo sát hiểu sai: mô tả quan niệm sai mà đáp án sai đại diện. */
+    misconception: z.string().optional(),
+  })).min(1),
+}).superRefine((a, ctx) => {
+  const ids = new Set<string>();
+  for (const it of a.items) {
+    if (ids.has(it.id)) ctx.addIssue({ code: "custom", message: `duplicate item id ${it.id}` });
+    ids.add(it.id);
+    if (!it.options.some((o) => o.correct)) ctx.addIssue({ code: "custom", message: `item ${it.id} has no correct option` });
+  }
+});
+export type Assessment = z.infer<typeof assessment>;
