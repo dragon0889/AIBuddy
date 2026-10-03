@@ -1,0 +1,28 @@
+{
+  "id": "L2-RESP-01",
+  "level": 2,
+  "pillar": "responsible_ai",
+  "outcomes": ["RESP.2.1"],
+  "title": { "vi": "AI có thể nói sai!", "en": "AI can be wrong!" },
+  "minutes": 12,
+  "requiresCamera": false,
+  "steps": [
+    { "id": "s1", "type": "story", "mascot": "bud", "text": { "vi": "Một chatbot trả lời bài tập về Việt Nam. Hãy làm thám tử kiểm chứng!" } },
+    {
+      "id": "s2",
+      "type": "spot_ai_mistake",
+      "aiAnswer": { "vi": "Hà Nội là thủ đô của Việt Nam. Thành phố này nằm ở miền Nam, bên bờ sông Hồng." },
+      "facts": [{ "vi": "Hà Nội là thủ đô của Việt Nam, nằm ở miền Bắc, bên bờ sông Hồng." }],
+      "wrongParts": ["nằm ở miền Nam"],
+      "feedback": { "vi": "Phần 'miền Nam' là sai. AI nói rất tự tin nhưng vẫn có thể bịa. Hãy đối chiếu với sách hoặc nguồn tin cậy." }
+    },
+    { "id": "s3", "type": "discussion", "prompt": { "vi": "Làm sao con biết khi nào nên tin câu trả lời của AI?" }, "parentTips": { "vi": "Khuyến khích con nêu cách kiểm tra (hỏi người lớn, tra sách, tìm nguồn thứ hai) thay vì chỉ cho đáp án." } }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      { "vi": "AI trả lời rất tự tin; vì sao vẫn có thể sai?" },
+      { "vi": "Con sẽ kiểm tra bằng cách nào?" }
+    ],
+    "activity": { "vi": "Cùng con hỏi một chatbot một câu về địa phương mình, rồi kiểm tra từng ý bằng nguồn khác." }
+  }
+}

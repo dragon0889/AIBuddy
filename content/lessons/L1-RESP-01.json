@@ -1,0 +1,29 @@
+{
+  "id": "L1-RESP-01",
+  "level": 1,
+  "pillar": "responsible_ai",
+  "outcomes": ["RESP.1.1"],
+  "title": { "vi": "Bạn máy cũng có lúc nhầm", "en": "Machines can make mistakes too" },
+  "minutes": 8,
+  "requiresCamera": false,
+  "steps": [
+    { "id": "s1", "type": "story", "mascot": "bud", "text": { "vi": "Bud là bạn robot. Hôm nay Bud nhìn một con mèo và bảo: 'Đây là con chó!'" } },
+    {
+      "id": "s2",
+      "type": "choice",
+      "prompt": { "vi": "Bud nói đúng hay sai?" },
+      "options": [
+        { "text": { "vi": "Bud nhầm rồi" }, "correct": true, "feedback": { "vi": "Đúng! Máy cũng có thể nhầm, vì người đã dạy máy." } },
+        { "text": { "vi": "Bud luôn đúng" }, "correct": false, "feedback": { "vi": "Thử nhìn lại nhé: đây là con mèo." } }
+      ]
+    },
+    { "id": "s3", "type": "unplugged", "instructions": { "vi": "Chơi trò 'Robot nhầm lẫn': bố mẹ đóng vai robot, cố tình gọi sai tên đồ vật. Con bắt lỗi và nói: 'Robot nhầm rồi!'" }, "materials": [{ "vi": "Vài đồ vật trong nhà" }] }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      { "vi": "Con thấy sao khi máy làm sai?" },
+      { "vi": "Khi nghi ngờ, con có thể hỏi ai để kiểm tra?" }
+    ],
+    "activity": { "vi": "Cùng con tìm 3 lần 'máy nhầm' trong tuần (nhận diện giọng nói, gợi ý video…) và kể lại vào cuối tuần." }
+  }
+}

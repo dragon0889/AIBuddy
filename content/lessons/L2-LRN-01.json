@@ -1,0 +1,26 @@
+{
+  "id": "L2-LRN-01",
+  "level": 2,
+  "pillar": "learning",
+  "outcomes": ["LRN.2.1"],
+  "title": { "vi": "Viết luật hay học từ ví dụ?", "en": "Rules or examples?" },
+  "minutes": 10,
+  "requiresCamera": false,
+  "steps": [
+    { "id": "s1", "type": "story", "mascot": "bud", "text": { "vi": "Làm sao dạy máy phân biệt mèo và chó? Viết thật nhiều luật hay cho máy xem thật nhiều ví dụ?" } },
+    {
+      "id": "s2",
+      "type": "drag_drop",
+      "prompt": { "vi": "Kéo mỗi tình huống vào đúng nhóm" },
+      "targets": [{ "id": "rules", "label": { "vi": "Viết luật" } }, { "id": "examples", "label": { "vi": "Học từ ví dụ" } }],
+      "items": [
+        { "label": { "vi": "Nếu trời mưa thì mang ô" }, "target": "rules" },
+        { "label": { "vi": "Xem 100 ảnh hoa rồi đoán loài hoa mới" }, "target": "examples" }
+      ]
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [{ "vi": "Con học đi xe đạp bằng luật hay bằng thử nhiều lần?" }],
+    "activity": { "vi": "Cùng con tự 'dạy' một người bạn phân biệt hai loại lá cây bằng ví dụ, không dùng luật." }
+  }
+}
