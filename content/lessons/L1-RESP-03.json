@@ -1,0 +1,84 @@
+{
+  "id": "L1-RESP-03",
+  "level": 1,
+  "pillar": "responsible_ai",
+  "outcomes": [
+    "RESP.1.1"
+  ],
+  "title": {
+    "vi": "Nhờ người lớn kiểm tra giúp"
+  },
+  "minutes": 8,
+  "requiresCamera": false,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Bud kể: 'Con mèo biết bay!' Con có tin không? Hãy cùng kiểm tra!"
+      }
+    },
+    {
+      "id": "s2",
+      "type": "choice",
+      "prompt": {
+        "vi": "Khi nghe điều lạ từ máy, con làm gì?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Hỏi người lớn và cùng kiểm tra"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Kiểm tra cùng người lớn rất an toàn."
+          }
+        },
+        {
+          "text": {
+            "vi": "Tin ngay"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Máy có thể nói sai, cần kiểm tra."
+          }
+        },
+        {
+          "text": {
+            "vi": "Im lặng một mình"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Hãy nói với người lớn nhé."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "unplugged",
+      "instructions": {
+        "vi": "Chơi 'Thật hay Bud nói đùa?': bố mẹ đọc 4 câu (2 đúng, 2 sai) 'do Bud nói'. Con giơ thẻ ✔ hoặc ✖ và nói vì sao."
+      },
+      "materials": [
+        {
+          "vi": "Hai tấm thẻ giấy ✔ và ✖"
+        }
+      ]
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "Con kiểm tra điều lạ bằng cách nào?"
+      },
+      {
+        "vi": "Ai là người con nhờ giúp khi nghi ngờ?"
+      }
+    ],
+    "activity": {
+      "vi": "Cùng con làm hai tấm thẻ ✔ và ✖ để chơi trò 'Thật hay Bud nói đùa?' mỗi tuần."
+    }
+  }
+}

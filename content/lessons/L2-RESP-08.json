@@ -1,0 +1,103 @@
+{
+  "id": "L2-RESP-08",
+  "level": 2,
+  "pillar": "responsible_ai",
+  "outcomes": [
+    "RESP.2.1"
+  ],
+  "title": {
+    "vi": "Tìm lỗi: Địa lí"
+  },
+  "minutes": 10,
+  "requiresCamera": false,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Một chatbot vừa trả lời bài tập. Hãy làm thám tử kiểm chứng: câu nào có thể sai?"
+      }
+    },
+    {
+      "id": "s2",
+      "type": "spot_ai_mistake",
+      "aiAnswer": {
+        "vi": "Sông Hồng chảy qua Hà Nội và đổ ra biển Đông. Đồng bằng sông Cửu Long nằm ở miền Bắc nước ta."
+      },
+      "facts": [
+        {
+          "vi": "Sông Hồng chảy qua Hà Nội, đổ ra biển Đông (Vịnh Bắc Bộ)."
+        },
+        {
+          "vi": "Đồng bằng sông Cửu Long ở miền Nam Việt Nam."
+        }
+      ],
+      "wrongParts": [
+        "nằm ở miền Bắc"
+      ],
+      "feedback": {
+        "vi": "Đồng bằng sông Cửu Long ở miền Nam, không phải miền Bắc. Hãy đối chiếu bản đồ hoặc sách giáo khoa."
+      }
+    },
+    {
+      "id": "s3",
+      "type": "choice",
+      "prompt": {
+        "vi": "Con sẽ làm gì để kiểm tra câu trả lời của AI?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Đối chiếu với sách hoặc nguồn tin cậy khác"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Luôn kiểm tra thêm một nguồn."
+          }
+        },
+        {
+          "text": {
+            "vi": "Tin ngay vì AI nói rất tự tin"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "AI nói tự tin vẫn có thể sai."
+          }
+        },
+        {
+          "text": {
+            "vi": "Hỏi lại AI cùng một câu cho đến khi nghe điều mình thích"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Cách này không đảm bảo đúng."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "type": "discussion",
+      "prompt": {
+        "vi": "Làm sao con biết khi nào nên tin AI?"
+      },
+      "parentTips": {
+        "vi": "Khuyến khích con nêu cách kiểm tra thay vì chỉ cho đáp án."
+      }
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "AI nhầm vị trí. Con kiểm tra bằng bản đồ thế nào?"
+      },
+      {
+        "vi": "Có thể tin AI về địa lí không?"
+      }
+    ],
+    "activity": {
+      "vi": "Cùng con mở bản đồ Việt Nam, tìm vị trí từng địa danh mà chatbot nhắc tới."
+    }
+  }
+}

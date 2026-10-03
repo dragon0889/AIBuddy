@@ -1,0 +1,119 @@
+{
+  "id": "L2-REP-01",
+  "level": 2,
+  "pillar": "representation",
+  "outcomes": [
+    "REP.2.1"
+  ],
+  "title": {
+    "vi": "Cây quyết định của Bud"
+  },
+  "minutes": 10,
+  "requiresCamera": false,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Bud phân loại đồ vật bằng cách hỏi nhiều câu: 'Có cánh không? Biết bay không?'"
+      }
+    },
+    {
+      "id": "s2",
+      "type": "drag_drop",
+      "prompt": {
+        "vi": "Đặt đồ vật vào đúng nhánh"
+      },
+      "targets": [
+        {
+          "id": "fly",
+          "label": {
+            "vi": "Biết bay"
+          }
+        },
+        {
+          "id": "nofly",
+          "label": {
+            "vi": "Không bay"
+          }
+        }
+      ],
+      "items": [
+        {
+          "label": {
+            "vi": "Chim bồ câu"
+          },
+          "target": "fly"
+        },
+        {
+          "label": {
+            "vi": "Con mèo"
+          },
+          "target": "nofly"
+        },
+        {
+          "label": {
+            "vi": "Con ong"
+          },
+          "target": "fly"
+        },
+        {
+          "label": {
+            "vi": "Con chó"
+          },
+          "target": "nofly"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "choice",
+      "prompt": {
+        "vi": "Cây quyết định hoạt động như thế nào?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Hỏi từng câu có/không để đi đến kết quả"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Mỗi câu hỏi chia nhỏ lựa chọn."
+          }
+        },
+        {
+          "text": {
+            "vi": "Đoán ngẫu nhiên"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Cây quyết định hỏi theo thứ tự."
+          }
+        },
+        {
+          "text": {
+            "vi": "Chỉ nhìn một lần rồi nói"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Máy cần hỏi nhiều bước."
+          }
+        }
+      ]
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "Con thử nghĩ một cây quyết định với 3 câu hỏi nhé."
+      },
+      {
+        "vi": "Trò chơi '20 câu hỏi' có giống cây quyết định không?"
+      }
+    ],
+    "activity": {
+      "vi": "Chơi '20 câu hỏi' với con, rồi vẽ lại các câu hỏi thành cây quyết định."
+    }
+  }
+}

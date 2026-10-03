@@ -1,0 +1,178 @@
+{
+  "id": "post-l1",
+  "kind": "post",
+  "level": 1,
+  "title": {
+    "vi": "Con đã học được gì?"
+  },
+  "items": [
+    {
+      "id": "q1",
+      "pillar": "perception",
+      "prompt": {
+        "vi": "Máy dùng bộ phận nào để NGHE?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Micro"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Camera"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Màn hình"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "PER.1.1"
+    },
+    {
+      "id": "q2",
+      "pillar": "learning",
+      "prompt": {
+        "vi": "Muốn robot nhận ra xe đồ chơi, ta nên..."
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Cho robot xem nhiều xe khác nhau"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Chỉ cho xem một xe"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Giấu xe đi"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "LRN.1.1"
+    },
+    {
+      "id": "q3",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "Khi máy trả lời sai, con nên..."
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Hỏi người lớn để kiểm tra"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Tin ngay"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Giận máy"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "RESP.1.1"
+    },
+    {
+      "id": "q4",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "Thông tin nào cần giữ bí mật?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Địa chỉ nhà"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Màu con thích"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Món đồ chơi con thích"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "RESP.1.2"
+    },
+    {
+      "id": "q5",
+      "pillar": "societal",
+      "prompt": {
+        "vi": "Máy thông minh giúp được việc gì tốt?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Tìm đường đi"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Tự quyết định mọi việc thay con"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Thay bố mẹ chăm con"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "SOC.1.1"
+    },
+    {
+      "id": "q6",
+      "pillar": "interaction",
+      "prompt": {
+        "vi": "Vì sao trợ lý có thể nghe nhầm?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Có tiếng ồn hoặc nói nhỏ"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Vì trợ lý đang ngủ"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Vì trợ lý không có tai"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "INT.1.1"
+    }
+  ]
+}

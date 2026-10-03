@@ -1,0 +1,59 @@
+{
+  "id": "L1-LRN-02",
+  "level": 1,
+  "pillar": "learning",
+  "outcomes": [
+    "LRN.1.1"
+  ],
+  "title": {
+    "vi": "Cử chỉ thần kỳ (cần camera, có người lớn bên cạnh)"
+  },
+  "minutes": 12,
+  "requiresCamera": true,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Hôm nay con sẽ dạy máy nhận ra hai cử chỉ: bàn tay mở và nắm tay. Ảnh chỉ nằm trên máy của con, không gửi đi đâu cả!"
+      }
+    },
+    {
+      "id": "s2",
+      "type": "ml_task",
+      "project": "PRJ-01",
+      "labels": [
+        {
+          "vi": "Bàn tay mở"
+        },
+        {
+          "vi": "Nắm tay"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "discussion",
+      "prompt": {
+        "vi": "Máy nhận đúng cử chỉ nào, nhầm cử chỉ nào?"
+      },
+      "parentTips": {
+        "vi": "Ngồi cùng con khi dùng camera. Nhấn mạnh rằng ảnh không rời khỏi máy và con có thể xóa bất cứ lúc nào."
+      }
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "Con thấy máy học nhanh hay chậm?"
+      },
+      {
+        "vi": "Nếu máy nhầm, ta cho máy xem thêm gì?"
+      }
+    ],
+    "activity": {
+      "vi": "Quan sát cùng con và dừng ngay nếu con mệt. Hỏi con: 'Con dạy máy bằng cách nào?'"
+    }
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "id": "post-l2",
+  "kind": "post",
+  "level": 2,
+  "title": {
+    "vi": "Kiểm tra cuối – cấp 2"
+  },
+  "items": [
+    {
+      "id": "q1",
+      "pillar": "perception",
+      "prompt": {
+        "vi": "Nhiều điểm ảnh hơn thì ảnh thường..."
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Nét hơn"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Mờ hơn"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Không đổi"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "PER.2.1"
+    },
+    {
+      "id": "q2",
+      "pillar": "representation",
+      "prompt": {
+        "vi": "Trong cây quyết định, mỗi câu hỏi dùng để..."
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Chia nhỏ lựa chọn"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Làm máy chậm lại"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Đổi màu ảnh"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "REP.2.1"
+    },
+    {
+      "id": "q3",
+      "pillar": "learning",
+      "prompt": {
+        "vi": "Viết luật khác học từ ví dụ ở điểm nào?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Học từ ví dụ: máy tự rút ra quy luật từ dữ liệu"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Hai cách hoàn toàn giống nhau"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Viết luật không cần người"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "LRN.2.1"
+    },
+    {
+      "id": "q4",
+      "pillar": "learning",
+      "prompt": {
+        "vi": "Máy nhầm 'Kéo' thành 'Bao'. Việc đầu tiên nên làm?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Xem lại dữ liệu và thêm ảnh ở nhiều góc"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Bỏ qua lỗi"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Xóa hết dữ liệu mà không xem"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "LRN.2.3"
+    },
+    {
+      "id": "q5",
+      "pillar": "societal",
+      "prompt": {
+        "vi": "Cách giúp ứng dụng nhận diện công bằng hơn là..."
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Thu thập dữ liệu từ nhiều nhóm khác nhau"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Chỉ lấy ảnh của một nhóm"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Bỏ qua khi máy nhầm"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "SOC.2.1"
+    },
+    {
+      "id": "q6",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "AI nói rất tự tin. Điều đó có chắc là đúng không?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Không chắc, cần kiểm tra"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Chắc chắn đúng"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Đúng nếu câu dài"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "RESP.2.1"
+    },
+    {
+      "id": "q7",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "Cách làm câu hỏi tốt hơn là..."
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Nói rõ con muốn gì và dành cho ai"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Viết thật dài và lặp lại"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Viết toàn chữ hoa"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "RESP.2.2"
+    },
+    {
+      "id": "q8",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "Chatbot hỏi số điện thoại của con. Con nên..."
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Không đưa và báo bố mẹ"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Đưa để chatbot gọi"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Đưa nếu chatbot hứa giữ bí mật"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "RESP.2.3"
+    },
+    {
+      "id": "q9",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "Cách xử lý khi thấy nội dung đáng sợ trên mạng?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Báo người lớn và không chia sẻ"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Chia sẻ cho bạn xem"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Giấu một mình"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "RESP.2.4"
+    },
+    {
+      "id": "q10",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "Để kiểm tra một thông tin từ AI con có thể..."
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Tra sách hoặc hỏi người lớn"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Hỏi lại AI cùng câu"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Không cần kiểm tra"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "RESP.2.1"
+    }
+  ]
+}

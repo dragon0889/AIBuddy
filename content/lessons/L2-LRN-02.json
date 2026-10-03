@@ -1,0 +1,69 @@
+{
+  "id": "L2-LRN-02",
+  "level": 2,
+  "pillar": "learning",
+  "outcomes": [
+    "LRN.2.2"
+  ],
+  "title": {
+    "vi": "Oẳn tù tì cùng máy (cần camera)"
+  },
+  "minutes": 15,
+  "requiresCamera": true,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Hôm nay con sẽ dạy máy nhận ra kéo – búa – bao bằng cách chụp ảnh bàn tay. Ảnh chỉ nằm trên máy của con."
+      }
+    },
+    {
+      "id": "s2",
+      "type": "ml_task",
+      "project": "PRJ-02",
+      "labels": [
+        {
+          "vi": "Kéo"
+        },
+        {
+          "vi": "Búa"
+        },
+        {
+          "vi": "Bao"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "block_task",
+      "goal": {
+        "vi": "Dùng khối lệnh để nhân vật chạy khi máy nhận ra 'Búa'."
+      }
+    },
+    {
+      "id": "s4",
+      "type": "discussion",
+      "prompt": {
+        "vi": "Con đã chụp bao nhiêu ảnh cho mỗi cử chỉ? Có đủ đa dạng chưa?"
+      },
+      "parentTips": {
+        "vi": "Nhắc con thay đổi góc tay, ánh sáng và nền khi chụp."
+      }
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "Máy học từ ảnh con chụp, đúng không?"
+      },
+      {
+        "vi": "Thêm ảnh khác nhau giúp ích gì?"
+      }
+    ],
+    "activity": {
+      "vi": "Chơi oẳn tù tì với con, vừa chơi vừa hỏi: 'Nếu máy đoán sai con sẽ cho máy xem thêm gì?'"
+    }
+  }
+}

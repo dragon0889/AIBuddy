@@ -1,0 +1,118 @@
+{
+  "id": "L1-SOC-01",
+  "level": 1,
+  "pillar": "societal",
+  "outcomes": [
+    "SOC.1.1"
+  ],
+  "title": {
+    "vi": "Ai làm ra máy thông minh?"
+  },
+  "minutes": 8,
+  "requiresCamera": false,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Bud được các bạn kỹ sư làm ra. Bud giúp được nhiều việc, nhưng cần người dùng đúng cách."
+      }
+    },
+    {
+      "id": "s2",
+      "type": "choice",
+      "prompt": {
+        "vi": "Ai làm ra các máy thông minh?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Con người"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Con người làm ra và dạy cho máy."
+          }
+        },
+        {
+          "text": {
+            "vi": "Máy tự mọc lên"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Máy do con người làm ra đấy."
+          }
+        },
+        {
+          "text": {
+            "vi": "Các ngôi sao"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Không phải vậy, do con người tạo nên."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "choice",
+      "prompt": {
+        "vi": "Máy thông minh có thể giúp việc gì tốt?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Tìm đường đi"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Bản đồ trên điện thoại giúp ta tìm đường."
+          }
+        },
+        {
+          "text": {
+            "vi": "Tự quyết định mọi việc cho con"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Con vẫn cần tự suy nghĩ và hỏi người lớn."
+          }
+        },
+        {
+          "text": {
+            "vi": "Thay bố mẹ chăm con"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Máy chỉ là công cụ hỗ trợ."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "type": "discussion",
+      "prompt": {
+        "vi": "Con thấy máy giúp ích ở đâu trong nhà mình?"
+      },
+      "parentTips": {
+        "vi": "Hãy để con tự kể ví dụ; khen khi con nêu cả điểm tốt và điểm cần cẩn thận."
+      }
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "Máy giúp gia đình mình việc gì?"
+      },
+      {
+        "vi": "Có việc nào con vẫn muốn tự làm không?"
+      }
+    ],
+    "activity": {
+      "vi": "Cùng con đi một vòng quanh nhà, tìm 3 thứ 'thông minh' và nói xem chúng giúp gì cho gia đình."
+    }
+  }
+}

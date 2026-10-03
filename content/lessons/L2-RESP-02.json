@@ -1,0 +1,115 @@
+{
+  "id": "L2-RESP-02",
+  "level": 2,
+  "pillar": "responsible_ai",
+  "outcomes": [
+    "RESP.2.2"
+  ],
+  "title": {
+    "vi": "Hỏi sao cho rõ?"
+  },
+  "minutes": 10,
+  "requiresCamera": false,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Mai hỏi chatbot: 'Cho mình biết về cây.' Câu trả lời dài và lan man. Bud bảo: 'Hỏi rõ hơn sẽ nhận câu trả lời tốt hơn!'"
+      }
+    },
+    {
+      "id": "s2",
+      "type": "choice",
+      "prompt": {
+        "vi": "Câu hỏi nào rõ ràng hơn?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Kể 3 điều thú vị về cây xương rồng cho bạn lớp 3"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Có đối tượng, chủ đề và số lượng rõ ràng."
+          }
+        },
+        {
+          "text": {
+            "vi": "Cây"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Quá ngắn nên máy không biết con muốn gì."
+          }
+        },
+        {
+          "text": {
+            "vi": "Nói gì đó đi"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Chưa cho máy biết con cần gì."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "choice",
+      "prompt": {
+        "vi": "Thêm điều gì giúp câu hỏi tốt hơn?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Nói rõ con muốn gì và dành cho ai"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Càng rõ càng tốt."
+          }
+        },
+        {
+          "text": {
+            "vi": "Viết thật nhiều chữ lặp lại"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Dài không có nghĩa là rõ."
+          }
+        },
+        {
+          "text": {
+            "vi": "Dùng toàn chữ viết hoa"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Chữ hoa không giúp câu hỏi rõ hơn."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "type": "short_text",
+      "prompt": {
+        "vi": "Hãy viết lại câu hỏi 'Cho mình biết về biển' sao cho rõ hơn."
+      }
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "Con muốn máy giúp việc gì khi hỏi?"
+      },
+      {
+        "vi": "Cùng sửa một câu hỏi cho rõ hơn."
+      }
+    ],
+    "activity": {
+      "vi": "Cùng con viết 2 câu hỏi cho cùng một chủ đề: một câu mơ hồ, một câu rõ ràng, rồi so sánh (nếu có chatbot thì thử dưới sự giám sát)."
+    }
+  }
+}

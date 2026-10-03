@@ -35,6 +35,10 @@ export class ContentStore {
   outcomes(): Outcome[] { return this._outcomes; }
   assessment(id: string): Assessment | undefined { return this._assessments.get(id); }
   assessments(): Assessment[] { return [...this._assessments.values()]; }
+  /** Nội dung hướng dẫn phụ huynh (ADD-07). */
+  parentGuide(): unknown {
+    return JSON.parse(readFileSync(join(this.dir, "parent/talk-about-ai.json"), "utf8"));
+  }
   /** CMS: thay/ thêm bài đã được duyệt xuất bản. */
   publish(l: Lesson): void { this.byId.set(l.id, l); }
 }

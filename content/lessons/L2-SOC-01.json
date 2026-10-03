@@ -1,0 +1,129 @@
+{
+  "id": "L2-SOC-01",
+  "level": 2,
+  "pillar": "societal",
+  "outcomes": [
+    "SOC.2.1"
+  ],
+  "title": {
+    "vi": "Dữ liệu lệch và sự công bằng"
+  },
+  "minutes": 12,
+  "requiresCamera": false,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Một ứng dụng nhận diện mặt chỉ được học với ảnh của các bạn tóc đen, nên với bạn tóc vàng nó hay nhầm."
+      }
+    },
+    {
+      "id": "s2",
+      "type": "choice",
+      "prompt": {
+        "vi": "Vì sao ứng dụng nhầm với bạn tóc vàng?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Dữ liệu học thiếu ảnh tóc vàng"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Dữ liệu lệch dẫn tới kết quả không công bằng."
+          }
+        },
+        {
+          "text": {
+            "vi": "Vì bạn tóc vàng cố ý đánh lừa"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Không phải lỗi của bạn ấy."
+          }
+        },
+        {
+          "text": {
+            "vi": "Vì máy ghét màu vàng"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Máy không có cảm xúc, nó chỉ học từ dữ liệu."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "drag_drop",
+      "prompt": {
+        "vi": "Phân loại cách làm"
+      },
+      "targets": [
+        {
+          "id": "fair",
+          "label": {
+            "vi": "Giúp công bằng hơn"
+          }
+        },
+        {
+          "id": "unfair",
+          "label": {
+            "vi": "Gây thiên lệch"
+          }
+        }
+      ],
+      "items": [
+        {
+          "label": {
+            "vi": "Thu thập ảnh nhiều bạn khác nhau"
+          },
+          "target": "fair"
+        },
+        {
+          "label": {
+            "vi": "Chỉ lấy ảnh của một nhóm bạn"
+          },
+          "target": "unfair"
+        },
+        {
+          "label": {
+            "vi": "Kiểm tra máy với nhiều nhóm bạn"
+          },
+          "target": "fair"
+        },
+        {
+          "label": {
+            "vi": "Bỏ qua khi máy nhầm với một bạn"
+          },
+          "target": "unfair"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "type": "discussion",
+      "prompt": {
+        "vi": "Nếu máy đối xử không công bằng, ai sửa được?"
+      },
+      "parentTips": {
+        "vi": "Nhấn mạnh con người chịu trách nhiệm khi xây dựng và kiểm tra hệ thống."
+      }
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "Công bằng nghĩa là gì?"
+      },
+      {
+        "vi": "Con sẽ làm gì khi thấy máy nhầm với một bạn?"
+      }
+    ],
+    "activity": {
+      "vi": "Cùng con liệt kê cách để một ứng dụng đối xử công bằng với mọi người."
+    }
+  }
+}

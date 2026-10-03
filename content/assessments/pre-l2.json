@@ -1,0 +1,290 @@
+{
+  "id": "pre-l2",
+  "kind": "pre",
+  "level": 2,
+  "title": {
+    "vi": "Kiểm tra đầu vào – cấp 2"
+  },
+  "items": [
+    {
+      "id": "p1",
+      "pillar": "perception",
+      "prompt": {
+        "vi": "Điểm ảnh (pixel) là gì?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Ô nhỏ trong ảnh có màu"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Một loại máy ảnh"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Một loại pin"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "PER.2.1"
+    },
+    {
+      "id": "p2",
+      "pillar": "representation",
+      "prompt": {
+        "vi": "Cây quyết định hoạt động thế nào?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Hỏi từng câu có/không để ra kết quả"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Đoán ngẫu nhiên"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Nhìn một lần rồi nói"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "REP.2.1"
+    },
+    {
+      "id": "p3",
+      "pillar": "learning",
+      "prompt": {
+        "vi": "'Học máy' nghĩa là máy học từ..."
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Ví dụ (dữ liệu)"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Phép màu"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Tiếng ồn"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "LRN.2.1"
+    },
+    {
+      "id": "p4",
+      "pillar": "learning",
+      "prompt": {
+        "vi": "Máy nhận diện hay nhầm. Cách nào giúp tốt hơn?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Thêm dữ liệu đa dạng hơn"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Tắt máy đi"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Chỉ dùng một ảnh"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "LRN.2.3"
+    },
+    {
+      "id": "p5",
+      "pillar": "societal",
+      "prompt": {
+        "vi": "Dữ liệu thiếu một nhóm bạn sẽ gây ra điều gì?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Máy có thể nhầm hoặc đối xử không công bằng với nhóm đó"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Máy chạy nhanh hơn"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Không có gì xảy ra"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "SOC.2.1"
+    },
+    {
+      "id": "p6",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "Khi AI đưa ra một thông tin, cách kiểm tra tốt là..."
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Đối chiếu với nguồn khác"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Tin vì AI nói tự tin"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Hỏi lại cho tới khi hợp ý mình"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "RESP.2.1"
+    },
+    {
+      "id": "p7",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "Câu hỏi nào rõ hơn?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Kể 3 điều thú vị về cá heo cho bạn lớp 3"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Cá"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Nói đi"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "RESP.2.2"
+    },
+    {
+      "id": "p8",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "Có nên cho chatbot biết địa chỉ nhà và tên trường?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Không, vì đó là thông tin riêng"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Có, để chatbot giúp tốt hơn"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Có, nếu chatbot hỏi lịch sự"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "RESP.2.3"
+    },
+    {
+      "id": "p9",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "Dấu hiệu nào gợi ý ảnh do AI tạo?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Bàn tay có quá nhiều ngón, chữ méo"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Ảnh có màu đẹp"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Ảnh chụp ban ngày"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "RESP.2.4"
+    },
+    {
+      "id": "p10",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "Thấy video lạ gây nghi ngờ, con nên..."
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Hỏi người lớn cùng kiểm tra"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Chia sẻ ngay"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Tin ngay"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "RESP.2.4"
+    }
+  ]
+}

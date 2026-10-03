@@ -1,0 +1,84 @@
+{
+  "id": "L1-INT-01",
+  "level": 1,
+  "pillar": "interaction",
+  "outcomes": [
+    "INT.1.1"
+  ],
+  "title": {
+    "vi": "Trợ lý giọng nói nghe nhầm"
+  },
+  "minutes": 8,
+  "requiresCamera": false,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Con nói với trợ lý ảo: 'Bật bài hát về con cá!' Nhưng trợ lý lại bật 'con cà'. Ồ, nghe nhầm rồi!"
+      }
+    },
+    {
+      "id": "s2",
+      "type": "choice",
+      "prompt": {
+        "vi": "Vì sao trợ lý có thể nghe nhầm?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Có tiếng ồn hoặc con nói nhỏ"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Máy cũng có thể nghe nhầm như người."
+          }
+        },
+        {
+          "text": {
+            "vi": "Vì trợ lý đang ngủ"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Máy không ngủ, nhưng nó có thể nghe không rõ."
+          }
+        },
+        {
+          "text": {
+            "vi": "Vì trợ lý không có tai"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Máy có micro, nhưng micro nghe chưa hoàn hảo."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "unplugged",
+      "instructions": {
+        "vi": "Trò chơi 'Điện thoại thì thầm': cả nhà ngồi thành hàng, thì thầm một câu từ người đầu đến người cuối. So sánh câu cuối với câu đầu và cười vui khi có chỗ 'nghe nhầm'."
+      },
+      "materials": [
+        {
+          "vi": "Cả nhà cùng chơi"
+        }
+      ]
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "Khi trợ lý nghe nhầm, con làm gì?"
+      },
+      {
+        "vi": "Con có nói rõ hơn được không?"
+      }
+    ],
+    "activity": {
+      "vi": "Cùng con thử nói một câu lệnh với trợ lý ảo (nếu có) ở chỗ ồn và chỗ yên tĩnh, rồi so sánh."
+    }
+  }
+}

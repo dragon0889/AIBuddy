@@ -1,0 +1,103 @@
+{
+  "id": "L2-RESP-06",
+  "level": 2,
+  "pillar": "responsible_ai",
+  "outcomes": [
+    "RESP.2.1"
+  ],
+  "title": {
+    "vi": "Tìm lỗi: Khoa học"
+  },
+  "minutes": 10,
+  "requiresCamera": false,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Một chatbot vừa trả lời bài tập. Hãy làm thám tử kiểm chứng: câu nào có thể sai?"
+      }
+    },
+    {
+      "id": "s2",
+      "type": "spot_ai_mistake",
+      "aiAnswer": {
+        "vi": "Cây xanh hấp thụ khí cacbonic và thải ra khí oxi trong quá trình quang hợp. Quang hợp xảy ra vào ban đêm khi không có ánh sáng."
+      },
+      "facts": [
+        {
+          "vi": "Quang hợp cần ánh sáng nên xảy ra chủ yếu ban ngày."
+        },
+        {
+          "vi": "Cây hấp thụ khí cacbonic và thải khí oxi khi quang hợp."
+        }
+      ],
+      "wrongParts": [
+        "xảy ra vào ban đêm"
+      ],
+      "feedback": {
+        "vi": "Quang hợp cần ánh sáng nên không diễn ra vào ban đêm. Nên thử tìm thêm một nguồn để kiểm tra."
+      }
+    },
+    {
+      "id": "s3",
+      "type": "choice",
+      "prompt": {
+        "vi": "Con sẽ làm gì để kiểm tra câu trả lời của AI?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Đối chiếu với sách hoặc nguồn tin cậy khác"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Luôn kiểm tra thêm một nguồn."
+          }
+        },
+        {
+          "text": {
+            "vi": "Tin ngay vì AI nói rất tự tin"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "AI nói tự tin vẫn có thể sai."
+          }
+        },
+        {
+          "text": {
+            "vi": "Hỏi lại AI cùng một câu cho đến khi nghe điều mình thích"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Cách này không đảm bảo đúng."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "type": "discussion",
+      "prompt": {
+        "vi": "Làm sao con biết khi nào nên tin AI?"
+      },
+      "parentTips": {
+        "vi": "Khuyến khích con nêu cách kiểm tra thay vì chỉ cho đáp án."
+      }
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "Vì sao cây cần ánh sáng?"
+      },
+      {
+        "vi": "Con thử kiểm tra ý nào trước?"
+      }
+    ],
+    "activity": {
+      "vi": "Cùng con làm thí nghiệm nhỏ: để một cây gần cửa sổ và một cây trong tủ tối, quan sát vài ngày."
+    }
+  }
+}

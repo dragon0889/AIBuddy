@@ -1,0 +1,118 @@
+{
+  "id": "L3-RESP-02",
+  "level": 3,
+  "pillar": "responsible_ai",
+  "outcomes": [
+    "RESP.3.2"
+  ],
+  "title": {
+    "vi": "Nhận biết nội dung do AI tạo"
+  },
+  "minutes": 12,
+  "requiresCamera": false,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Có một đoạn video nổi tiếng trong đó một người nổi tiếng nói điều lạ lùng. Có thể là deepfake!"
+      }
+    },
+    {
+      "id": "s2",
+      "type": "choice",
+      "prompt": {
+        "vi": "Dấu hiệu nào có thể cho thấy deepfake?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Khẩu hình không khớp tiếng, ánh sáng khuôn mặt lạ"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Đây là các dấu hiệu thường gặp."
+          }
+        },
+        {
+          "text": {
+            "vi": "Video có nhiều lượt xem"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Lượt xem không chứng minh thật hay giả."
+          }
+        },
+        {
+          "text": {
+            "vi": "Video dài hơn một phút"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Độ dài không nói lên điều gì."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "choice",
+      "prompt": {
+        "vi": "Khi nghi ngờ một video là giả, em nên làm gì?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Tìm nguồn gốc, đối chiếu tin chính thống, và báo cáo nếu cần"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Đừng chia sẻ khi chưa kiểm tra."
+          }
+        },
+        {
+          "text": {
+            "vi": "Chia sẻ để mọi người cùng biết"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Việc chia sẻ có thể lan truyền tin sai."
+          }
+        },
+        {
+          "text": {
+            "vi": "Bỏ qua và quên đi"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Nên báo cáo nếu nội dung gây hại."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "type": "discussion",
+      "prompt": {
+        "vi": "Nếu bạn em bị ghép mặt vào ảnh xấu thì em làm gì?"
+      },
+      "parentTips": {
+        "vi": "Cùng con xác định người lớn đáng tin để báo và cách lưu bằng chứng, báo cáo nền tảng."
+      }
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "Em biết kênh nào để báo cáo nội dung xấu?"
+      },
+      {
+        "vi": "Em sẽ giúp bạn bị ghép ảnh như thế nào?"
+      }
+    ],
+    "activity": {
+      "vi": "Cùng con tìm hiểu cách báo cáo nội dung xấu trên 2 nền tảng mà con hay dùng."
+    }
+  }
+}

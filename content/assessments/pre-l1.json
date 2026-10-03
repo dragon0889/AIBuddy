@@ -1,0 +1,178 @@
+{
+  "id": "pre-l1",
+  "kind": "pre",
+  "level": 1,
+  "title": {
+    "vi": "Khởi động cùng Bud"
+  },
+  "items": [
+    {
+      "id": "p1",
+      "pillar": "perception",
+      "prompt": {
+        "vi": "Máy dùng bộ phận nào để NHÌN?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Camera"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Micro"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Loa"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "PER.1.1"
+    },
+    {
+      "id": "p2",
+      "pillar": "learning",
+      "prompt": {
+        "vi": "Muốn robot nhận ra con mèo, ta cần làm gì?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Cho robot xem nhiều ảnh mèo"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Không cần làm gì"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Chỉ nói tên con mèo một lần"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "LRN.1.1"
+    },
+    {
+      "id": "p3",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "Máy thông minh có thể làm sai không?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Có thể"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Không bao giờ"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Chỉ sai vào ban đêm"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "RESP.1.1"
+    },
+    {
+      "id": "p4",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "Một chiếc loa hỏi địa chỉ nhà con. Con nên làm gì?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Hỏi bố mẹ trước"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Nói luôn địa chỉ"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Nói thật to"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "RESP.1.2"
+    },
+    {
+      "id": "p5",
+      "pillar": "societal",
+      "prompt": {
+        "vi": "Ai làm ra các máy thông minh?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Con người"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Các ngôi sao"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Con vật"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "SOC.1.1"
+    },
+    {
+      "id": "p6",
+      "pillar": "interaction",
+      "prompt": {
+        "vi": "Trợ lý giọng nói có thể nghe nhầm không?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Có thể"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Không bao giờ"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Chỉ khi ngủ"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "INT.1.1"
+    }
+  ]
+}

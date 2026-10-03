@@ -1,0 +1,118 @@
+{
+  "id": "L2-RESP-04",
+  "level": 2,
+  "pillar": "responsible_ai",
+  "outcomes": [
+    "RESP.2.4"
+  ],
+  "title": {
+    "vi": "Ảnh thật hay ảnh AI?"
+  },
+  "minutes": 10,
+  "requiresCamera": false,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Ngày nay máy có thể vẽ ảnh, làm giọng nói rất giống thật. Chúng ta cần tập làm 'thám tử' để nhận ra."
+      }
+    },
+    {
+      "id": "s2",
+      "type": "choice",
+      "prompt": {
+        "vi": "Dấu hiệu nào có thể cho thấy ảnh do AI tạo?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Bàn tay có sáu ngón hoặc chữ trong ảnh méo mó"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Máy hay vẽ lỗi ở tay và chữ."
+          }
+        },
+        {
+          "text": {
+            "vi": "Ảnh có màu đẹp"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Ảnh thật cũng có màu đẹp."
+          }
+        },
+        {
+          "text": {
+            "vi": "Ảnh có nhiều người"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Điều này không nói lên điều gì."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "choice",
+      "prompt": {
+        "vi": "Khi thấy một video lạ khiến con nghi ngờ, con nên làm gì?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Hỏi người lớn để cùng kiểm tra"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Người lớn giúp kiểm tra nguồn tin."
+          }
+        },
+        {
+          "text": {
+            "vi": "Chia sẻ ngay cho bạn bè"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Đừng chia sẻ khi chưa chắc chắn."
+          }
+        },
+        {
+          "text": {
+            "vi": "Tin ngay vì trông giống thật"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Trông giống thật chưa chắc là thật."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "type": "discussion",
+      "prompt": {
+        "vi": "Con đã từng thấy hình nào khiến con nghi ngờ chưa?"
+      },
+      "parentTips": {
+        "vi": "Lắng nghe, không phán xét. Nhấn mạnh việc nhờ người lớn kiểm tra và báo cáo nội dung xấu."
+      }
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "Làm sao biết một bức ảnh là thật?"
+      },
+      {
+        "vi": "Con sẽ báo ai khi gặp nội dung đáng sợ?"
+      }
+    ],
+    "activity": {
+      "vi": "Cùng con xem 4 ảnh (2 thật, 2 do AI tạo – do người lớn chuẩn bị) và đoán, rồi giải thích dấu hiệu."
+    }
+  }
+}

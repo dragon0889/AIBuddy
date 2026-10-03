@@ -1,0 +1,129 @@
+{
+  "id": "L2-RESP-03",
+  "level": 2,
+  "pillar": "responsible_ai",
+  "outcomes": [
+    "RESP.2.3"
+  ],
+  "title": {
+    "vi": "Chuyện riêng không kể cho chatbot"
+  },
+  "minutes": 10,
+  "requiresCamera": false,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Lan hỏi chatbot: 'Mình tên Lan, học trường Hoa Sen, nhà số 12. Bạn giúp mình bài tập nhé!'. Bud bảo: 'Khoan đã!'"
+      }
+    },
+    {
+      "id": "s2",
+      "type": "choice",
+      "prompt": {
+        "vi": "Vì sao không nên đưa tên trường, địa chỉ cho chatbot?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Thông tin riêng tư có thể bị lưu lại hoặc lộ ra"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Thông tin cá nhân cần giữ kín."
+          }
+        },
+        {
+          "text": {
+            "vi": "Vì chatbot sẽ đến nhà chơi"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Không phải, nhưng thông tin có thể bị lưu giữ."
+          }
+        },
+        {
+          "text": {
+            "vi": "Vì chatbot hết pin"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Không liên quan, lý do là quyền riêng tư."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "drag_drop",
+      "prompt": {
+        "vi": "Phân loại thông tin"
+      },
+      "targets": [
+        {
+          "id": "keep",
+          "label": {
+            "vi": "Không nói với chatbot"
+          }
+        },
+        {
+          "id": "ok",
+          "label": {
+            "vi": "Có thể hỏi"
+          }
+        }
+      ],
+      "items": [
+        {
+          "label": {
+            "vi": "Địa chỉ nhà"
+          },
+          "target": "keep"
+        },
+        {
+          "label": {
+            "vi": "Số điện thoại"
+          },
+          "target": "keep"
+        },
+        {
+          "label": {
+            "vi": "Cách giải phép tính 12 + 7"
+          },
+          "target": "ok"
+        },
+        {
+          "label": {
+            "vi": "Tên đầy đủ và trường học"
+          },
+          "target": "keep"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "type": "discussion",
+      "prompt": {
+        "vi": "Nếu chatbot hỏi thông tin riêng, con sẽ làm gì?"
+      },
+      "parentTips": {
+        "vi": "Giúp con nói ra quy tắc của mình: 'Không nói, tắt đi và báo bố mẹ'."
+      }
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "Thông tin nào là riêng tư?"
+      },
+      {
+        "vi": "Con báo ai khi có chuyện lạ?"
+      }
+    ],
+    "activity": {
+      "vi": "Cùng con viết 3 quy tắc 'giữ kín' thông tin cá nhân khi dùng internet và dán lên chỗ con học."
+    }
+  }
+}

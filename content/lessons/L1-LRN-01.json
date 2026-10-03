@@ -1,0 +1,84 @@
+{
+  "id": "L1-LRN-01",
+  "level": 1,
+  "pillar": "learning",
+  "outcomes": [
+    "LRN.1.1"
+  ],
+  "title": {
+    "vi": "Dạy robot bằng ví dụ"
+  },
+  "minutes": 10,
+  "requiresCamera": false,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Bud chưa biết con mèo trông thế nào. Muốn Bud học, con phải cho Bud xem thật nhiều ví dụ!"
+      }
+    },
+    {
+      "id": "s2",
+      "type": "choice",
+      "prompt": {
+        "vi": "Làm thế nào để Bud nhận ra con mèo?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Cho Bud xem nhiều ảnh mèo"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Máy học từ ví dụ do người đưa vào."
+          }
+        },
+        {
+          "text": {
+            "vi": "Cứ để Bud tự đoán"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Không có ví dụ thì Bud không học được."
+          }
+        },
+        {
+          "text": {
+            "vi": "Chỉ cho xem một bức ảnh duy nhất"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Một ảnh thì ít quá, Bud dễ nhầm."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "unplugged",
+      "instructions": {
+        "vi": "Trò chơi 'Dạy robot': con đóng vai người dạy, bố mẹ đóng vai robot. Con cho robot xem 3 món đồ chơi 'xe' và 3 món 'không phải xe'. Sau đó đưa món mới, xem robot đoán đúng không."
+      },
+      "materials": [
+        {
+          "vi": "Đồ chơi hoặc đồ vật có sẵn"
+        }
+      ]
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "Robot học được gì từ ví dụ con đưa?"
+      },
+      {
+        "vi": "Nếu con chỉ cho xem một loại xe, robot có nhận ra loại xe khác không?"
+      }
+    ],
+    "activity": {
+      "vi": "Cùng con thử dạy 'robot' (là bố mẹ) phân biệt hai loại đồ vật, rồi hỏi con cần thêm ví dụ nào để robot đoán đúng hơn."
+    }
+  }
+}

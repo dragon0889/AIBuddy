@@ -5,6 +5,7 @@ import { AppError } from "./lib/errors.ts";
 import { loadAuth } from "./lib/session.ts";
 import { authRoutes } from "./modules/auth.ts";
 import { familyRoutes } from "./modules/family.ts";
+import { learningRoutes } from "./modules/learning.ts";
 
 export async function buildApp(ctx: AppContext): Promise<FastifyInstance> {
   const app = Fastify({ logger: false, trustProxy: ctx.config.isProd, bodyLimit: 256 * 1024 });
@@ -42,5 +43,6 @@ export async function buildApp(ctx: AppContext): Promise<FastifyInstance> {
   app.get("/health", async () => ({ status: "ok" }));
   authRoutes(app, ctx);
   familyRoutes(app, ctx);
+  learningRoutes(app, ctx);
   return app;
 }

@@ -34,3 +34,36 @@ describe("rubric", () => {
     expect(rubric.safeParse(read("rubrics/project-rubric.json")).success).toBe(true);
   });
 });
+
+describe("assessments and acceptance criteria", () => {
+  const cat = outcomeCatalog.parse(read("outcomes/outcomes.json"));
+  const known = new Set(cat.outcomes.map((o) => o.id));
+  const lessons = readdirSync(join(root, "lessons")).filter((f) => f.endsWith(".json")).map((f) => lesson.parse(read(`lessons/${f}`)));
+
+  it("assessments are valid and reference known outcomes", async () => {
+    const { assessment } = await import("./schema.ts");
+    const files = readdirSync(join(root, "assessments")).filter((f) => f.endsWith(".json"));
+    expect(files.length).toBeGreaterThanOrEqual(6);
+    for (const f of files) {
+      const a = assessment.parse(read(`assessments/${f}`));
+      for (const it of a.items) if (it.outcome) expect(known.has(it.outcome), `${f}:${it.id}`).toBe(true);
+    }
+  });
+
+  it("ADD-01: at least 1/3 of lessons per level in MVP levels are responsible_ai", () => {
+    for (const level of [1, 2]) {
+      const ls = lessons.filter((l) => l.level === level);
+      const share = ls.filter((l) => l.pillar === "responsible_ai").length / ls.length;
+      expect(share, `level ${level}`).toBeGreaterThanOrEqual(1 / 3);
+    }
+  });
+
+  it("ADD-02: at least 6 'spot the AI mistake' lessons at level 2", () => {
+    const n = lessons.filter((l) => l.level === 2 && l.steps.some((s) => s.type === "spot_ai_mistake")).length;
+    expect(n).toBeGreaterThanOrEqual(6);
+  });
+
+  it("ADD-09: Level 1 lessons needing the camera are explicitly flagged", () => {
+    for (const l of lessons.filter((x) => x.level === 1 && x.steps.some((s) => s.type === "ml_task"))) expect(l.requiresCamera).toBe(true);
+  });
+});

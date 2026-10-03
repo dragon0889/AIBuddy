@@ -1,0 +1,123 @@
+{
+  "id": "L1-PER-01",
+  "level": 1,
+  "pillar": "perception",
+  "outcomes": [
+    "PER.1.1"
+  ],
+  "title": {
+    "vi": "Máy nhìn và nghe thế nào?"
+  },
+  "minutes": 8,
+  "requiresCamera": false,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Bud có một con mắt đặc biệt gọi là camera và một cái tai gọi là micro. Bud nhìn và nghe khác bạn đấy!"
+      }
+    },
+    {
+      "id": "s2",
+      "type": "choice",
+      "prompt": {
+        "vi": "Máy dùng bộ phận nào để NHÌN?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Camera"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Camera giúp máy 'nhìn'."
+          }
+        },
+        {
+          "text": {
+            "vi": "Micro"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Micro là để nghe. Thử lại nhé!"
+          }
+        },
+        {
+          "text": {
+            "vi": "Loa"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Loa phát tiếng ra, không phải để nhìn."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "choice",
+      "prompt": {
+        "vi": "Máy dùng bộ phận nào để NGHE?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Micro"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Micro giúp máy 'nghe'."
+          }
+        },
+        {
+          "text": {
+            "vi": "Camera"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Camera là để nhìn."
+          }
+        },
+        {
+          "text": {
+            "vi": "Màn hình"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Màn hình hiển thị hình ảnh."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "type": "unplugged",
+      "instructions": {
+        "vi": "Chơi trò 'Mắt máy': bịt mắt một bạn nhỏ, bạn kia chỉ dùng tiếng nói để tả một món đồ. Hỏi: 'Khi không nhìn được, con dựa vào gì?'"
+      },
+      "materials": [
+        {
+          "vi": "Một khăn bịt mắt"
+        },
+        {
+          "vi": "Vài món đồ quen thuộc"
+        }
+      ]
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "Mắt và tai của máy khác mắt và tai của con ở điểm nào?"
+      },
+      {
+        "vi": "Máy có thể nhìn nhầm không?"
+      }
+    ],
+    "activity": {
+      "vi": "Cùng con liệt kê 3 thiết bị trong nhà có camera hoặc micro, rồi hỏi con thiết bị đó 'nhìn' hay 'nghe' để làm gì."
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "id": "micro-l2-resp",
+  "kind": "micro",
+  "level": 2,
+  "title": {
+    "vi": "Mini-quiz: Dùng AI có trách nhiệm"
+  },
+  "items": [
+    {
+      "id": "m1",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "Bạn nói: 'AI không bao giờ sai.' Điều đó..."
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Không đúng, AI có thể sai"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Đúng"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "RESP.2.1"
+    },
+    {
+      "id": "m2",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "Thông tin nào không nên đưa cho chatbot?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Địa chỉ nhà"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Cách giải một phép tính"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "RESP.2.3"
+    },
+    {
+      "id": "m3",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "Câu hỏi nào tốt hơn?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Giải thích quang hợp cho bạn lớp 4 bằng ví dụ đơn giản"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Quang hợp?"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "RESP.2.2"
+    },
+    {
+      "id": "m4",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "Ảnh có chữ méo mó và bàn tay lạ có thể do..."
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "AI tạo ra"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Máy ảnh bị hỏng chắc chắn"
+          },
+          "correct": false
+        }
+      ],
+      "outcome": "RESP.2.4"
+    }
+  ]
+}

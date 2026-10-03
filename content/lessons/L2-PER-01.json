@@ -1,0 +1,87 @@
+{
+  "id": "L2-PER-01",
+  "level": 2,
+  "pillar": "perception",
+  "outcomes": [
+    "PER.2.1"
+  ],
+  "title": {
+    "vi": "Ảnh là những chấm số"
+  },
+  "minutes": 10,
+  "requiresCamera": false,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Với máy, bức ảnh là rất nhiều ô nhỏ gọi là điểm ảnh (pixel). Mỗi ô có một con số cho biết màu sáng hay tối."
+      }
+    },
+    {
+      "id": "s2",
+      "type": "choice",
+      "prompt": {
+        "vi": "Điểm ảnh (pixel) là gì?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Một ô nhỏ trong ảnh có màu"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Rất nhiều ô nhỏ ghép lại thành ảnh."
+          }
+        },
+        {
+          "text": {
+            "vi": "Một loại máy ảnh"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Pixel là ô nhỏ của ảnh, không phải máy."
+          }
+        },
+        {
+          "text": {
+            "vi": "Một loại bút"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Pixel liên quan tới ảnh số."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "unplugged",
+      "instructions": {
+        "vi": "Vẽ ảnh pixel: dùng giấy kẻ ô vuông, tô màu để tạo hình trái tim (mỗi ô là một pixel). Sau đó thử vẽ với ít ô hơn và so sánh độ nét."
+      },
+      "materials": [
+        {
+          "vi": "Giấy kẻ ô"
+        },
+        {
+          "vi": "Bút màu"
+        }
+      ]
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "Nhiều ô hơn thì ảnh nét hơn hay mờ hơn?"
+      },
+      {
+        "vi": "Máy đọc số hay đọc màu?"
+      }
+    ],
+    "activity": {
+      "vi": "Cùng con tạo hai bức ảnh pixel 5×5 và 20×20, so sánh độ nét."
+    }
+  }
+}

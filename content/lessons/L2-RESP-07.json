@@ -1,0 +1,103 @@
+{
+  "id": "L2-RESP-07",
+  "level": 2,
+  "pillar": "responsible_ai",
+  "outcomes": [
+    "RESP.2.1"
+  ],
+  "title": {
+    "vi": "Tìm lỗi: Toán"
+  },
+  "minutes": 10,
+  "requiresCamera": false,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Một chatbot vừa trả lời bài tập. Hãy làm thám tử kiểm chứng: câu nào có thể sai?"
+      }
+    },
+    {
+      "id": "s2",
+      "type": "spot_ai_mistake",
+      "aiAnswer": {
+        "vi": "Hình chữ nhật dài 8cm, rộng 3cm có chu vi là 22cm và diện tích là 24cm². Công thức chu vi là dài nhân rộng."
+      },
+      "facts": [
+        {
+          "vi": "Chu vi hình chữ nhật = (dài + rộng) × 2 = (8 + 3) × 2 = 22cm."
+        },
+        {
+          "vi": "Diện tích = dài × rộng = 24cm²."
+        }
+      ],
+      "wrongParts": [
+        "Công thức chu vi là dài nhân rộng"
+      ],
+      "feedback": {
+        "vi": "Công thức chu vi sai: chu vi = (dài + rộng) × 2. Dài nhân rộng là công thức tính diện tích. Hãy tự tính lại bằng tay."
+      }
+    },
+    {
+      "id": "s3",
+      "type": "choice",
+      "prompt": {
+        "vi": "Con sẽ làm gì để kiểm tra câu trả lời của AI?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Đối chiếu với sách hoặc nguồn tin cậy khác"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Luôn kiểm tra thêm một nguồn."
+          }
+        },
+        {
+          "text": {
+            "vi": "Tin ngay vì AI nói rất tự tin"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "AI nói tự tin vẫn có thể sai."
+          }
+        },
+        {
+          "text": {
+            "vi": "Hỏi lại AI cùng một câu cho đến khi nghe điều mình thích"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Cách này không đảm bảo đúng."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "type": "discussion",
+      "prompt": {
+        "vi": "Làm sao con biết khi nào nên tin AI?"
+      },
+      "parentTips": {
+        "vi": "Khuyến khích con nêu cách kiểm tra thay vì chỉ cho đáp án."
+      }
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "Số trong câu trả lời đúng nhưng công thức sai, con thấy thế nào?"
+      },
+      {
+        "vi": "Cách tự kiểm tra bằng phép tính?"
+      }
+    ],
+    "activity": {
+      "vi": "Cùng con đo một quyển sách, tự tính chu vi và diện tích, rồi so với câu trả lời của chatbot."
+    }
+  }
+}

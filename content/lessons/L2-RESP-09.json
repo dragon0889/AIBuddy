@@ -1,0 +1,104 @@
+{
+  "id": "L2-RESP-09",
+  "level": 2,
+  "pillar": "responsible_ai",
+  "outcomes": [
+    "RESP.2.1"
+  ],
+  "title": {
+    "vi": "Tìm lỗi: Động vật"
+  },
+  "minutes": 10,
+  "requiresCamera": false,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Một chatbot vừa trả lời bài tập. Hãy làm thám tử kiểm chứng: câu nào có thể sai?"
+      }
+    },
+    {
+      "id": "s2",
+      "type": "spot_ai_mistake",
+      "aiAnswer": {
+        "vi": "Cá voi là loài cá sống ở biển và thở bằng mang. Cá voi xanh là loài động vật lớn nhất từng được biết đến."
+      },
+      "facts": [
+        {
+          "vi": "Cá voi là động vật có vú, thở bằng phổi, dù sống dưới biển."
+        },
+        {
+          "vi": "Cá voi xanh là loài động vật lớn nhất được biết đến."
+        }
+      ],
+      "wrongParts": [
+        "loài cá",
+        "thở bằng mang"
+      ],
+      "feedback": {
+        "vi": "Cá voi không phải cá: nó là động vật có vú và thở bằng phổi. Phần về cá voi xanh thì đúng."
+      }
+    },
+    {
+      "id": "s3",
+      "type": "choice",
+      "prompt": {
+        "vi": "Con sẽ làm gì để kiểm tra câu trả lời của AI?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Đối chiếu với sách hoặc nguồn tin cậy khác"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Luôn kiểm tra thêm một nguồn."
+          }
+        },
+        {
+          "text": {
+            "vi": "Tin ngay vì AI nói rất tự tin"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "AI nói tự tin vẫn có thể sai."
+          }
+        },
+        {
+          "text": {
+            "vi": "Hỏi lại AI cùng một câu cho đến khi nghe điều mình thích"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Cách này không đảm bảo đúng."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "type": "discussion",
+      "prompt": {
+        "vi": "Làm sao con biết khi nào nên tin AI?"
+      },
+      "parentTips": {
+        "vi": "Khuyến khích con nêu cách kiểm tra thay vì chỉ cho đáp án."
+      }
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "Có phần nào AI nói đúng, phần nào sai?"
+      },
+      {
+        "vi": "Con tra cứu ở đâu?"
+      }
+    ],
+    "activity": {
+      "vi": "Cùng con tìm một cuốn sách về động vật biển, kiểm tra các ý chatbot nói và ghi lại điều mới biết."
+    }
+  }
+}

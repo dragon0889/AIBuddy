@@ -1,0 +1,178 @@
+{
+  "id": "misconception-l2",
+  "kind": "misconception",
+  "level": 2,
+  "title": {
+    "vi": "Bạn nghĩ sao? (khảo sát)"
+  },
+  "items": [
+    {
+      "id": "m1",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "'AI biết mọi thứ.' – đúng hay sai?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Đúng"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Sai"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Không chắc"
+          },
+          "correct": false
+        }
+      ],
+      "misconception": "AI biết mọi thứ"
+    },
+    {
+      "id": "m2",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "'AI luôn trả lời đúng.' – đúng hay sai?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Đúng"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Sai"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Không chắc"
+          },
+          "correct": false
+        }
+      ],
+      "misconception": "AI luôn đúng"
+    },
+    {
+      "id": "m3",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "'AI có cảm xúc như con người.' – đúng hay sai?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Đúng"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Sai"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Không chắc"
+          },
+          "correct": false
+        }
+      ],
+      "misconception": "AI có cảm xúc"
+    },
+    {
+      "id": "m4",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "'AI tự nghĩ ra mọi thứ mà không cần dữ liệu hay người dạy.' – đúng hay sai?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Đúng"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Sai"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Không chắc"
+          },
+          "correct": false
+        }
+      ],
+      "misconception": "AI tự học không cần dữ liệu"
+    },
+    {
+      "id": "m5",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "'Nếu AI nói tự tin thì chắc chắn đúng.' – đúng hay sai?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Đúng"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Sai"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Không chắc"
+          },
+          "correct": false
+        }
+      ],
+      "misconception": "Tự tin = đúng"
+    },
+    {
+      "id": "m6",
+      "pillar": "responsible_ai",
+      "prompt": {
+        "vi": "'Chatbot giữ bí mật mọi điều con kể.' – đúng hay sai?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Đúng"
+          },
+          "correct": false
+        },
+        {
+          "text": {
+            "vi": "Sai"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "vi": "Không chắc"
+          },
+          "correct": false
+        }
+      ],
+      "misconception": "Chatbot giữ bí mật tuyệt đối"
+    }
+  ]
+}

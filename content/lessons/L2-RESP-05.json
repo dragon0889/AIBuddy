@@ -1,0 +1,103 @@
+{
+  "id": "L2-RESP-05",
+  "level": 2,
+  "pillar": "responsible_ai",
+  "outcomes": [
+    "RESP.2.1"
+  ],
+  "title": {
+    "vi": "Tìm lỗi: Lịch sử"
+  },
+  "minutes": 10,
+  "requiresCamera": false,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Một chatbot vừa trả lời bài tập. Hãy làm thám tử kiểm chứng: câu nào có thể sai?"
+      }
+    },
+    {
+      "id": "s2",
+      "type": "spot_ai_mistake",
+      "aiAnswer": {
+        "vi": "Vua Quang Trung đại phá quân Thanh vào năm 1789. Trận đánh nổi tiếng nhất diễn ra tại Ngọc Hồi – Đống Đa và vua Quang Trung sinh ra ở Huế."
+      },
+      "facts": [
+        {
+          "vi": "Quang Trung (Nguyễn Huệ) đại phá quân Thanh năm 1789 (Xuân Kỷ Dậu)."
+        },
+        {
+          "vi": "Nguyễn Huệ sinh ra ở Bình Định (Tây Sơn), không phải Huế."
+        }
+      ],
+      "wrongParts": [
+        "sinh ra ở Huế"
+      ],
+      "feedback": {
+        "vi": "Phần 'sinh ra ở Huế' là sai. AI có thể nhầm chi tiết dù nói đúng các phần còn lại. Hãy đối chiếu sách giáo khoa."
+      }
+    },
+    {
+      "id": "s3",
+      "type": "choice",
+      "prompt": {
+        "vi": "Con sẽ làm gì để kiểm tra câu trả lời của AI?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Đối chiếu với sách hoặc nguồn tin cậy khác"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Luôn kiểm tra thêm một nguồn."
+          }
+        },
+        {
+          "text": {
+            "vi": "Tin ngay vì AI nói rất tự tin"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "AI nói tự tin vẫn có thể sai."
+          }
+        },
+        {
+          "text": {
+            "vi": "Hỏi lại AI cùng một câu cho đến khi nghe điều mình thích"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Cách này không đảm bảo đúng."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "type": "discussion",
+      "prompt": {
+        "vi": "Làm sao con biết khi nào nên tin AI?"
+      },
+      "parentTips": {
+        "vi": "Khuyến khích con nêu cách kiểm tra thay vì chỉ cho đáp án."
+      }
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "AI nói đúng phần lớn nhưng vẫn có một chi tiết sai, con có để ý không?"
+      },
+      {
+        "vi": "Con kiểm tra bằng sách nào?"
+      }
+    ],
+    "activity": {
+      "vi": "Cùng con chọn một sự kiện lịch sử, hỏi chatbot rồi kiểm tra từng ý bằng sách giáo khoa."
+    }
+  }
+}

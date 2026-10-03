@@ -1,0 +1,89 @@
+{
+  "id": "L3-RESP-01",
+  "level": 3,
+  "pillar": "responsible_ai",
+  "outcomes": [
+    "RESP.3.1"
+  ],
+  "title": {
+    "vi": "Học hay nhờ làm hộ?"
+  },
+  "minutes": 12,
+  "requiresCamera": false,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Nam nhờ chatbot viết cả bài văn rồi nộp cho cô. Điều này có ổn không?"
+      }
+    },
+    {
+      "id": "s2",
+      "type": "choice",
+      "prompt": {
+        "vi": "Cách dùng AI nào giúp em học tốt hơn?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Nhờ AI giải thích chỗ chưa hiểu rồi tự làm bài"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! AI là người trợ giúp, em vẫn cần tự suy nghĩ."
+          }
+        },
+        {
+          "text": {
+            "vi": "Chép nguyên câu trả lời của AI"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Như vậy em không học được và có thể sai."
+          }
+        },
+        {
+          "text": {
+            "vi": "Nhờ AI làm hết bài rồi nộp"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Đó là nhờ làm hộ, không phải học."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "short_text",
+      "prompt": {
+        "vi": "Hãy viết 3 quy tắc dùng AI cho riêng em khi học bài."
+      }
+    },
+    {
+      "id": "s4",
+      "type": "discussion",
+      "prompt": {
+        "vi": "Em tự thấy AI giúp em học ở chỗ nào, và ở chỗ nào em nên tự làm?"
+      },
+      "parentTips": {
+        "vi": "Tôn trọng quy tắc em đặt ra; cùng em xem lại sau một tuần."
+      }
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "Con thấy dùng AI để học khác nhờ AI làm hộ ở điểm nào?"
+      },
+      {
+        "vi": "Quy tắc nào của con khó giữ nhất?"
+      }
+    ],
+    "activity": {
+      "vi": "Cùng con viết 'bản cam kết dùng AI' của gia đình với 3–5 quy tắc, và xem lại sau 2 tuần."
+    }
+  }
+}

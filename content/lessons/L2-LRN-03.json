@@ -1,0 +1,124 @@
+{
+  "id": "L2-LRN-03",
+  "level": 2,
+  "pillar": "learning",
+  "outcomes": [
+    "LRN.2.3"
+  ],
+  "title": {
+    "vi": "Vì sao máy đoán sai?"
+  },
+  "minutes": 12,
+  "requiresCamera": true,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Mô hình của Bud nhầm 'Kéo' thành 'Bao'. Hãy làm thám tử điều tra nguyên nhân!"
+      }
+    },
+    {
+      "id": "s2",
+      "type": "choice",
+      "prompt": {
+        "vi": "Vì sao máy có thể đoán sai?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Dữ liệu ít hoặc thiếu đa dạng"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Cần ảnh ở nhiều góc, ánh sáng, nền khác nhau."
+          }
+        },
+        {
+          "text": {
+            "vi": "Vì máy lười"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Máy không lười, nó chỉ học từ dữ liệu."
+          }
+        },
+        {
+          "text": {
+            "vi": "Vì màn hình bẩn"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Không phải, lý do thường là dữ liệu."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "ml_task",
+      "project": "PRJ-02",
+      "labels": [
+        {
+          "vi": "Kéo"
+        },
+        {
+          "vi": "Búa"
+        },
+        {
+          "vi": "Bao"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "type": "choice",
+      "prompt": {
+        "vi": "Sau khi thêm ảnh khác nhau, con mong điều gì xảy ra?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Máy đoán đúng hơn trong nhiều tình huống"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Đúng! Dữ liệu đa dạng giúp máy tổng quát hơn."
+          }
+        },
+        {
+          "text": {
+            "vi": "Máy chắc chắn không bao giờ sai"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Máy vẫn có thể sai, ta chỉ làm giảm lỗi."
+          }
+        },
+        {
+          "text": {
+            "vi": "Máy không học nữa"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Máy vẫn học nếu có dữ liệu mới."
+          }
+        }
+      ]
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "Con tìm ra nguyên nhân máy sai chưa?"
+      },
+      {
+        "vi": "Con đã thêm dữ liệu nào?"
+      }
+    ],
+    "activity": {
+      "vi": "Cùng con ghi lại 3 lần máy đoán sai và nghĩ cách sửa dữ liệu cho từng lần."
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "id": "L1-RESP-02",
+  "level": 1,
+  "pillar": "responsible_ai",
+  "outcomes": [
+    "RESP.1.2"
+  ],
+  "title": {
+    "vi": "Bí mật của mình"
+  },
+  "minutes": 8,
+  "requiresCamera": false,
+  "steps": [
+    {
+      "id": "s1",
+      "type": "story",
+      "mascot": "bud",
+      "text": {
+        "vi": "Có một chiếc loa thông minh hỏi: 'Bạn tên gì? Nhà bạn ở đâu?' Con sẽ làm gì?"
+      }
+    },
+    {
+      "id": "s2",
+      "type": "choice",
+      "prompt": {
+        "vi": "Loa hỏi địa chỉ nhà con. Con nên làm gì?"
+      },
+      "options": [
+        {
+          "text": {
+            "vi": "Không nói, và hỏi bố mẹ"
+          },
+          "correct": true,
+          "feedback": {
+            "vi": "Hay lắm! Địa chỉ là bí mật của gia đình."
+          }
+        },
+        {
+          "text": {
+            "vi": "Nói luôn địa chỉ"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Thông tin cá nhân cần giữ kín, hãy hỏi người lớn trước."
+          }
+        },
+        {
+          "text": {
+            "vi": "Nói tên trường"
+          },
+          "correct": false,
+          "feedback": {
+            "vi": "Tên trường cũng là thông tin riêng, cần hỏi bố mẹ."
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "type": "drag_drop",
+      "prompt": {
+        "vi": "Kéo vào đúng nhóm"
+      },
+      "targets": [
+        {
+          "id": "secret",
+          "label": {
+            "vi": "Giữ bí mật"
+          }
+        },
+        {
+          "id": "share",
+          "label": {
+            "vi": "Có thể kể"
+          }
+        }
+      ],
+      "items": [
+        {
+          "label": {
+            "vi": "Địa chỉ nhà"
+          },
+          "target": "secret"
+        },
+        {
+          "label": {
+            "vi": "Màu sắc con thích"
+          },
+          "target": "share"
+        },
+        {
+          "label": {
+            "vi": "Tên trường của con"
+          },
+          "target": "secret"
+        },
+        {
+          "label": {
+            "vi": "Con vật con thích"
+          },
+          "target": "share"
+        }
+      ]
+    }
+  ],
+  "parentGuide": {
+    "talkAbout": [
+      {
+        "vi": "Những thông tin nào của con cần giữ bí mật?"
+      },
+      {
+        "vi": "Khi máy hỏi điều riêng tư, con làm gì?"
+      }
+    ],
+    "activity": {
+      "vi": "Cùng con làm 'hộp bí mật' bằng giấy: viết các thông tin cần giữ kín và bỏ vào hộp, rồi nhắc lại quy tắc 'hỏi bố mẹ trước'."
+    }
+  }
+}

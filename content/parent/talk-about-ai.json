@@ -1,0 +1,16 @@
+{
+  "version": "0.1",
+  "status": "draft - cần chuyên gia sư phạm duyệt",
+  "sections": [
+    { "id": "why", "title": { "vi": "Vì sao nên nói chuyện với con về AI?" },
+      "body": { "vi": "Trẻ đã gặp AI hằng ngày (trợ lý giọng nói, gợi ý video, chatbot). Việc trò chuyện giúp con hiểu AI là công cụ do con người làm ra: hữu ích nhưng có thể sai." } },
+    { "id": "questions", "title": { "vi": "5 câu hỏi mở đầu" },
+      "body": { "vi": "1) Con thấy AI giúp được việc gì? 2) Có lần nào AI trả lời sai không? 3) Con kiểm tra bằng cách nào? 4) Thông tin nào con không bao giờ nói với máy? 5) Nếu thấy điều đáng sợ trên mạng, con báo ai?" } },
+    { "id": "rules", "title": { "vi": "Gợi ý quy tắc gia đình" },
+      "body": { "vi": "Dùng AI để hiểu bài, không để làm hộ bài. Kiểm tra thông tin quan trọng bằng nguồn thứ hai. Không đưa thông tin cá nhân cho chatbot. Luôn báo người lớn khi gặp nội dung lạ hoặc đáng sợ." } },
+    { "id": "outside", "title": { "vi": "Khi con dùng AI ngoài ứng dụng" },
+      "body": { "vi": "Ngồi cùng con ở những lần đầu, đặt giới hạn thời gian, bật chế độ an toàn trên thiết bị, và hỏi con kể lại điều đã hỏi và điều đã học. Không phạt khi con kể thật; khen việc con chủ động báo cáo." } },
+    { "id": "privacy", "title": { "vi": "Về dữ liệu của con trên AIBuddy" },
+      "body": { "vi": "Ảnh và âm thanh con ghi khi huấn luyện mô hình chỉ ở trên thiết bị và bị xóa khỏi bộ nhớ sau khi huấn luyện. Bạn có thể giới hạn thời gian, tắt camera, rút đồng ý và yêu cầu xóa dữ liệu bất cứ lúc nào." } }
+  ]
+}
