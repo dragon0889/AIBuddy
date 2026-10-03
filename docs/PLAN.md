@@ -1,7 +1,7 @@
 # Kế hoạch phát triển – Nền tảng Giáo dục AI cho học sinh Tiểu học & THCS
 
 > Nguồn: `Thiết kế SRS App AI.docx` (IEEE 830 / ISO 29148). Tài liệu này phân tích SRS và đề xuất kế hoạch triển khai.
-> Trạng thái: **bản nháp v0.3** – triển khai **tại nhà (phụ huynh là kênh chính)**; đã bổ sung các khoảng trống sư phạm (mục 3A); nguồn giáo trình: [`CURRICULUM_SOURCES.md`](CURRICULUM_SOURCES.md); phụ lục SRS: [`SRS_ADDENDUM.md`](SRS_ADDENDUM.md). Thiết kế cơ bản: [`DESIGN.md`](DESIGN.md); mục tiêu học tập & đánh giá: [`LEARNING_OUTCOMES.md`](LEARNING_OUTCOMES.md).
+> Trạng thái: **v0.4 – Sprint 0 xong, Sprint 1 xong một phần** (xem `docs/spikes/SPRINT1_REPORT.md`) – trước đó v0.3 – triển khai **tại nhà (phụ huynh là kênh chính)**; đã bổ sung các khoảng trống sư phạm (mục 3A); nguồn giáo trình: [`CURRICULUM_SOURCES.md`](CURRICULUM_SOURCES.md); phụ lục SRS: [`SRS_ADDENDUM.md`](SRS_ADDENDUM.md). Thiết kế cơ bản: [`DESIGN.md`](DESIGN.md); mục tiêu học tập & đánh giá: [`LEARNING_OUTCOMES.md`](LEARNING_OUTCOMES.md).
 > Cần xác nhận các mục ở phần 8 trước khi bắt đầu Sprint 0.
 
 ## 1. Quyết định đã chốt
@@ -107,8 +107,8 @@ SRS gốc dạy *AI hoạt động thế nào* (AI literacy) nhưng chưa dạy 
 
 | Sprint | Trọng tâm | Kết quả bàn giao (Definition of Done) |
 |---|---|---|
-| **0** (tuần 1–2) | Khởi động | Chốt câu hỏi mở (phần 8), monorepo, CI, môi trường dev/staging, design tokens thân thiện trẻ em, threat model & DPIA v1, **Learning Outcomes v1 + rubric (ADD-04)** cùng cố vấn sư phạm, backlog chi tiết |
-| **1** | Spike kỹ thuật | PoC TF.js: chụp webcam → embedding → huấn luyện ≤15s trên thiết bị thấp; PoC Scratch Blocks + extension; quyết định WebGL/WASM. Báo cáo benchmark |
+| **0** (tuần 1–2) | Khởi động | Chốt câu hỏi mở (phần 8), monorepo, CI, môi trường dev/staging, design tokens thân thiện trẻ em, threat model & DPIA v1, **Learning Outcomes v1 + rubric (ADD-04)** cùng cố vấn sư phạm, backlog chi tiết | **✔ Xong** – xem `docs/adr/`, `docs/security/`, `docs/compliance/`, `docs/BACKLOG.md`, `content/outcomes/`, `packages/ui` |
+| **1** | Spike kỹ thuật | PoC TF.js: chụp webcam → embedding → huấn luyện ≤15s trên thiết bị thấp; PoC Scratch Blocks + extension; quyết định WebGL/WASM. Báo cáo benchmark | **◐ Xong phần làm được trong cloud** (ML + khối lệnh chạy được; **chưa đo trên thiết bị/webcam thật**) – xem `docs/spikes/SPRINT1_REPORT.md` |
 | **2** | Nền tảng & Auth | Mô hình dữ liệu, đăng ký/đăng nhập 4 vai trò, RBAC, 2FA admin, audit log, i18n |
 | **3** | **FR-010 Dual Consent** | Luồng 7.1 đầy đủ (DOB → PENDING_PARENT_CONSENT → OTP email/SMS → ACTIVE), Privacy by Default, test pháp lý |
 | **4** | Lesson Engine (FR-001) | Định dạng nội dung bài học (JSON schema, gắn mã outcome), renderer: trắc nghiệm, kéo thả, nhập ngắn, Mascot, TTS; **user testing vòng 1 với trẻ (ADD-11)** |

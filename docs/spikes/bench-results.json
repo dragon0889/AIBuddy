@@ -1,0 +1,1936 @@
+{
+  "date": "2026-10-03T15:37:48.996Z",
+  "userAgent": "Chromium headless (SwiftShader), môi trường cloud – không đại diện thiết bị thật",
+  "results": [
+    {
+      "requestedBackend": "cpu",
+      "cpuThrottle": 1,
+      "wallMs": 16450,
+      "backend": "cpu",
+      "samples": 90,
+      "classes": 3,
+      "epochs": 20,
+      "phases": [
+        {
+          "name": "init backend (cpu)",
+          "ms": 0.6000000000931323
+        },
+        {
+          "name": "load MobileNet (2 MB, tự host)",
+          "ms": 139.30000000004657
+        },
+        {
+          "name": "warm-up 1 khung",
+          "ms": 339.89999999990687
+        },
+        {
+          "name": "trích đặc trưng 90 khung",
+          "ms": 15249.899999999907
+        },
+        {
+          "name": "huấn luyện đầu phân loại (20 lần học)",
+          "ms": 562
+        }
+      ],
+      "trainMs": 562,
+      "totalMs": 15811.899999999907,
+      "testAccuracy": 1,
+      "finalLoss": 0.00003040350384253543,
+      "leakedTensors": 0,
+      "network": [
+        {
+          "url": "/models/mobilenet_v1_025/model.json",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group1-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group2-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group3-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group4-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group5-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group6-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group7-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group8-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group9-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group10-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group11-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group12-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group13-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group14-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group15-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group16-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group17-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group18-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group19-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group20-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group21-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group22-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group23-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group24-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group25-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group26-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group27-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group28-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group29-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group30-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group31-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group32-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group33-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group34-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group35-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group36-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group37-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group38-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group39-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group40-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group41-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group42-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group43-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group44-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group45-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group46-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group47-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group48-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group49-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group50-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group51-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group52-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group53-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group54-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group55-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        }
+      ],
+      "externalRequests": 0,
+      "nonGetRequests": 0
+    },
+    {
+      "requestedBackend": "cpu",
+      "cpuThrottle": 4,
+      "wallMs": 71810,
+      "backend": "cpu",
+      "samples": 90,
+      "classes": 3,
+      "epochs": 20,
+      "phases": [
+        {
+          "name": "init backend (cpu)",
+          "ms": 2.9000000001396984
+        },
+        {
+          "name": "load MobileNet (2 MB, tự host)",
+          "ms": 319.69999999995343
+        },
+        {
+          "name": "warm-up 1 khung",
+          "ms": 1007.7999999998137
+        },
+        {
+          "name": "trích đặc trưng 90 khung",
+          "ms": 67374.30000000005
+        },
+        {
+          "name": "huấn luyện đầu phân loại (20 lần học)",
+          "ms": 2587.3000000000466
+        }
+      ],
+      "trainMs": 2587.3000000000466,
+      "totalMs": 69961.6000000001,
+      "testAccuracy": 1,
+      "finalLoss": 0.00004536399137577973,
+      "leakedTensors": 0,
+      "network": [
+        {
+          "url": "/models/mobilenet_v1_025/model.json",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group1-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group2-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group3-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group4-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group5-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group6-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group7-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group8-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group9-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group10-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group11-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group12-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group13-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group14-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group15-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group16-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group17-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group18-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group19-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group20-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group21-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group22-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group23-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group24-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group25-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group26-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group27-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group28-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group29-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group30-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group31-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group32-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group33-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group34-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group35-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group36-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group37-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group38-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group39-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group40-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group41-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group42-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group43-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group44-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group45-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group46-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group47-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group48-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group49-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group50-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group51-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group52-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group53-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group54-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group55-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        }
+      ],
+      "externalRequests": 0,
+      "nonGetRequests": 0
+    },
+    {
+      "requestedBackend": "wasm",
+      "cpuThrottle": 1,
+      "wallMs": 2581,
+      "backend": "wasm",
+      "samples": 90,
+      "classes": 3,
+      "epochs": 20,
+      "phases": [
+        {
+          "name": "init backend (wasm)",
+          "ms": 50.800000000046566
+        },
+        {
+          "name": "load MobileNet (2 MB, tự host)",
+          "ms": 145.80000000004657
+        },
+        {
+          "name": "warm-up 1 khung",
+          "ms": 56.199999999953434
+        },
+        {
+          "name": "trích đặc trưng 90 khung",
+          "ms": 1869
+        },
+        {
+          "name": "huấn luyện đầu phân loại (20 lần học)",
+          "ms": 291.5
+        }
+      ],
+      "trainMs": 291.5,
+      "totalMs": 2160.5,
+      "testAccuracy": 1,
+      "finalLoss": 0.00000409623135055881,
+      "leakedTensors": 0,
+      "network": [
+        {
+          "url": "/tfjs-wasm/tfjs-backend-wasm-simd.wasm",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/model.json",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group1-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group2-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group3-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group4-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group5-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group6-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group7-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group8-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group9-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group10-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group11-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group12-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group13-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group14-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group15-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group16-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group17-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group18-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group19-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group20-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group21-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group22-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group23-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group24-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group25-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group26-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group27-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group28-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group29-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group30-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group31-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group32-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group33-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group34-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group35-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group36-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group37-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group38-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group39-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group40-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group41-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group42-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group43-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group44-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group45-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group46-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group47-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group48-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group49-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group50-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group51-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group52-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group53-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group54-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group55-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        }
+      ],
+      "externalRequests": 0,
+      "nonGetRequests": 0
+    },
+    {
+      "requestedBackend": "wasm",
+      "cpuThrottle": 4,
+      "wallMs": 10942,
+      "backend": "wasm",
+      "samples": 90,
+      "classes": 3,
+      "epochs": 20,
+      "phases": [
+        {
+          "name": "init backend (wasm)",
+          "ms": 92.30000000004657
+        },
+        {
+          "name": "load MobileNet (2 MB, tự host)",
+          "ms": 360
+        },
+        {
+          "name": "warm-up 1 khung",
+          "ms": 234.29999999981374
+        },
+        {
+          "name": "trích đặc trưng 90 khung",
+          "ms": 8526.40000000014
+        },
+        {
+          "name": "huấn luyện đầu phân loại (20 lần học)",
+          "ms": 1214
+        }
+      ],
+      "trainMs": 1214,
+      "totalMs": 9740.40000000014,
+      "testAccuracy": 1,
+      "finalLoss": 0.000019078892364632338,
+      "leakedTensors": 0,
+      "network": [
+        {
+          "url": "/tfjs-wasm/tfjs-backend-wasm-simd.wasm",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/model.json",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group1-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group2-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group3-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group4-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group5-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group6-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group7-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group8-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group9-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group10-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group11-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group12-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group13-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group14-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group15-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group16-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group17-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group18-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group19-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group20-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group21-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group22-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group23-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group24-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group25-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group26-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group27-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group28-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group29-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group30-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group31-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group32-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group33-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group34-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group35-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group36-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group37-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group38-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group39-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group40-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group41-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group42-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group43-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group44-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group45-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group46-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group47-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group48-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group49-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group50-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group51-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group52-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group53-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group54-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group55-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        }
+      ],
+      "externalRequests": 0,
+      "nonGetRequests": 0
+    },
+    {
+      "requestedBackend": "webgl",
+      "cpuThrottle": 1,
+      "wallMs": 12568,
+      "backend": "webgl",
+      "samples": 90,
+      "classes": 3,
+      "epochs": 20,
+      "phases": [
+        {
+          "name": "init backend (webgl)",
+          "ms": 18.5
+        },
+        {
+          "name": "load MobileNet (2 MB, tự host)",
+          "ms": 143.5
+        },
+        {
+          "name": "warm-up 1 khung",
+          "ms": 1921.4000000001397
+        },
+        {
+          "name": "trích đặc trưng 90 khung",
+          "ms": 6713.899999999907
+        },
+        {
+          "name": "huấn luyện đầu phân loại (20 lần học)",
+          "ms": 3298.6999999999534
+        }
+      ],
+      "trainMs": 3298.6999999999534,
+      "totalMs": 10012.59999999986,
+      "testAccuracy": 1,
+      "finalLoss": 0.0001072692612069659,
+      "leakedTensors": 0,
+      "network": [
+        {
+          "url": "/models/mobilenet_v1_025/model.json",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group1-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group2-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group3-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group4-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group5-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group6-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group7-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group8-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group9-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group10-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group11-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group12-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group13-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group14-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group15-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group16-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group17-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group18-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group19-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group20-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group21-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group22-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group23-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group24-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group25-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group26-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group27-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group28-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group29-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group30-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group31-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group32-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group33-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group34-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group35-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group36-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group37-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group38-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group39-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group40-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group41-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group42-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group43-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group44-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group45-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group46-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group47-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group48-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group49-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group50-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group51-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group52-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group53-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group54-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group55-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        }
+      ],
+      "externalRequests": 0,
+      "nonGetRequests": 0
+    },
+    {
+      "requestedBackend": "webgl",
+      "cpuThrottle": 4,
+      "wallMs": 18428,
+      "backend": "webgl",
+      "samples": 90,
+      "classes": 3,
+      "epochs": 20,
+      "phases": [
+        {
+          "name": "init backend (webgl)",
+          "ms": 36
+        },
+        {
+          "name": "load MobileNet (2 MB, tự host)",
+          "ms": 313.89999999990687
+        },
+        {
+          "name": "warm-up 1 khung",
+          "ms": 1701.1000000000931
+        },
+        {
+          "name": "trích đặc trưng 90 khung",
+          "ms": 11170.5
+        },
+        {
+          "name": "huấn luyện đầu phân loại (20 lần học)",
+          "ms": 4431.299999999814
+        }
+      ],
+      "trainMs": 4431.299999999814,
+      "totalMs": 15601.799999999814,
+      "testAccuracy": 1,
+      "finalLoss": 0.00010594432387733832,
+      "leakedTensors": 0,
+      "network": [
+        {
+          "url": "/models/mobilenet_v1_025/model.json",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group1-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group2-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group3-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group4-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group5-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group6-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group7-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group8-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group9-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group10-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group11-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group12-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group13-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group14-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group15-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group16-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group17-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group18-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group19-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group20-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group21-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group22-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group23-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group24-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group25-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group26-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group27-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group28-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group29-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group30-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group31-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group32-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group33-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group34-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group35-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group36-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group37-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group38-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group39-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group40-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group41-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group42-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group43-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group44-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group45-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group46-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group47-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group48-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group49-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group50-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group51-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group52-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group53-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group54-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        },
+        {
+          "url": "/models/mobilenet_v1_025/group55-shard1of1",
+          "method": "GET",
+          "hasBody": false
+        }
+      ],
+      "externalRequests": 0,
+      "nonGetRequests": 0
+    }
+  ]
+}

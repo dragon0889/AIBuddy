@@ -7,13 +7,26 @@
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "test": "echo \"no web tests yet\""
+    "test": "echo \"no web tests yet\"",
+    "predev": "node ../../scripts/copy-assets.mjs",
+    "prebuild": "node ../../scripts/copy-assets.mjs"
   },
   "dependencies": {
+    "@aibuddy/ml-core": "workspace:*",
     "@aibuddy/shared": "workspace:*",
+    "@aibuddy/ui": "workspace:*",
+    "@tensorflow/tfjs": "4.22.0",
+    "@tensorflow/tfjs-backend-wasm": "4.22.0",
+    "blockly": "^12.5.1",
     "next": "^15.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "scratch-blocks": "2.1.26"
   },
-  "devDependencies": { "@types/node": "^22.0.0", "@types/react": "^19.0.0", "@types/react-dom": "^19.0.0", "typescript": "^5.6.0" }
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.6.0"
+  }
 }
