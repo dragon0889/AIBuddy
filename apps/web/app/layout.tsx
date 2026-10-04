@@ -1,11 +1,14 @@
 import type { ReactNode } from "react";
+import { I18nProvider } from "../lib/i18n";
+import "./globals.css";
 
-export const metadata = { title: "AIBuddy", description: "Học AI cùng con – an toàn, vui, hiểu sâu" };
+export const metadata = { title: "AIBuddy", description: "Học AI cùng con – hiểu AI và biết dùng AI an toàn", manifest: "/manifest.webmanifest" };
+export const viewport = { themeColor: "#2563eb", width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="vi">
-      <body style={{ fontFamily: "system-ui, sans-serif", fontSize: 18, margin: 0, padding: 24 }}>{children}</body>
+      <body><I18nProvider>{children}</I18nProvider></body>
     </html>
   );
 }

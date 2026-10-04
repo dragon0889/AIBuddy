@@ -2,6 +2,7 @@ import cookie from "@fastify/cookie";
 import Fastify, { type FastifyInstance } from "fastify";
 import type { AppContext } from "./context.ts";
 import { AppError } from "./lib/errors.ts";
+import { MockOtpSender } from "./lib/otp.ts";
 import { loadAuth } from "./lib/session.ts";
 import { adminRoutes } from "./modules/admin.ts";
 import { authRoutes } from "./modules/auth.ts";
@@ -42,6 +43,11 @@ export async function buildApp(ctx: AppContext): Promise<FastifyInstance> {
   });
 
   app.get("/health", async () => ({ status: "ok" }));
+  // CHỈ dev/test: xem "hộp thư" OTP giả lập (không tồn tại ở production hoặc khi dùng nhà cung cấp thật).
+  if (!ctx.config.isProd && ctx.otp instanceof MockOtpSender) {
+    const mock = ctx.otp;
+    app.get("/api/v1/dev/outbox", async () => ({ messages: mock.outbox.slice(-50) }));
+  }
   authRoutes(app, ctx);
   familyRoutes(app, ctx);
   learningRoutes(app, ctx);

@@ -1,10 +1,13 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { contrastPairs, contrastRatio, levelTokens, pt } from "./tokens.ts";
+import { blockPalette, contrastPairs, contrastRatio, levelTokens, pt } from "./tokens.ts";
 
 describe("design tokens", () => {
   it("all text/background pairs meet WCAG AA (4.5:1)", () => {
     for (const [a, b] of contrastPairs) expect(contrastRatio(a, b), `${a}/${b}`).toBeGreaterThanOrEqual(4.5);
+  });
+  it("block colours meet WCAG AA with white text (sprint 1 finding)", () => {
+    for (const [name, c] of Object.entries(blockPalette)) expect(contrastRatio(c, "#FFFFFF"), name).toBeGreaterThanOrEqual(4.5);
   });
   it("font sizes meet SRS minimums (16pt primary, 14pt lower secondary)", () => {
     expect(levelTokens.l1.fontPt).toBeGreaterThanOrEqual(16);

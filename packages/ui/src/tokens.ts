@@ -43,3 +43,9 @@ export function contrastRatio(a: string, b: string): number {
   const [hi, lo] = [lum(a), lum(b)].sort((x, y) => y - x) as [number, number];
   return (hi + 0.05) / (lo + 0.05);
 }
+
+/** Màu khối lệnh đạt WCAG AA với chữ trắng (bảng màu Scratch gốc chỉ đạt 1,65–2,93:1 – xem docs/spikes/SPRINT1_REPORT.md). */
+export const blockPalette = {
+  motion: "#1D4ED8", looks: "#6D28D9", sounds: "#A21CAF", event: "#92400E", control: "#B45309",
+  sensing: "#0E7490", operators: "#15803D", data: "#C2410C", data_lists: "#C2410C", more: "#BE123C", pen: "#047857",
+} as const;
