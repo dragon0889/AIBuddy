@@ -194,6 +194,18 @@ CREATE TABLE content_drafts (
 );
 `,
   },
+  {
+    id: "004_feedback",
+    sql: `
+CREATE TABLE parent_feedback (
+  id uuid PRIMARY KEY,
+  parent_ref text NOT NULL,
+  ease int NOT NULL CHECK (ease BETWEEN 1 AND 5),
+  comment text,
+  created_at timestamptz NOT NULL
+);
+`,
+  },
 ];
 
 export async function migrate(db: Db): Promise<string[]> {

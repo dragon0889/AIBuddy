@@ -1,0 +1,31 @@
+# Mẫu triển khai (chưa kiểm thử). Đặt TLS 1.3 ở reverse proxy/load balancer phía trước (Caddy/Nginx/LB đám mây).
+# Bí mật (AIBUDDY_MASTER_KEY, AIBUDDY_PEPPER, POSTGRES_PASSWORD) lấy từ môi trường/KMS, KHÔNG commit.
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: aibuddy
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}
+      POSTGRES_DB: aibuddy
+    volumes: [pgdata:/var/lib/postgresql/data]
+    restart: unless-stopped
+  api:
+    build: { context: ., dockerfile: apps/api/Dockerfile }
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: postgres://aibuddy:${POSTGRES_PASSWORD}@postgres:5432/aibuddy
+      AIBUDDY_MASTER_KEY: ${AIBUDDY_MASTER_KEY:?32 byte base64}
+      AIBUDDY_PEPPER: ${AIBUDDY_PEPPER:?32 byte base64}
+      ALLOWED_ORIGIN: ${PUBLIC_ORIGIN:?https://...}
+      OTP_PROVIDER: ${OTP_PROVIDER:-}   # production KHÔNG được dùng "mock"
+    depends_on: [postgres]
+    restart: unless-stopped
+  web:
+    build: { context: ., dockerfile: apps/web/Dockerfile }
+    environment:
+      API_URL: http://api:3001
+    depends_on: [api]
+    ports: ["3000:3000"]
+    restart: unless-stopped
+volumes:
+  pgdata:

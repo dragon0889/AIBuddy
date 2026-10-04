@@ -41,3 +41,11 @@ Năm Big Ideas AI4K12 (PER Perception, REP Representation & Reasoning, LRN Learn
 
 ## 5. Quy trình biên soạn nội dung
 1. Chuyên gia sư phạm viết outcome và rubric → 2. Biên tập bài học (JSON) gắn outcome → 3. Duyệt nội dung & an toàn → 4. User testing với trẻ đúng độ tuổi → 5. Hiệu chỉnh → 6. Phát hành có phiên bản.
+
+---
+## Cập nhật: dữ liệu đã đưa vào hệ thống
+- Danh mục outcome: `content/outcomes/outcomes.json` (28 outcome, **bản nháp**), rubric: `content/rubrics/project-rubric.json`.
+- Bài đánh giá: `content/assessments/` – `pre-l1/post-l1`, `pre-l2/post-l2` (hai bản song song, **chưa kiểm định độ tin cậy/độ khó**), `micro-l2-resp`, `misconception-l2` (6 quan niệm sai). Trẻ cấp 3 dùng bộ cấp 2 (chưa có bộ riêng).
+- 25 bài học: `content/lessons/` (cấp 1: 8, cấp 2: 15, cấp 3: 2). Nội dung do kỹ thuật viên soạn bằng tiếng Việt, **cần chuyên gia sư phạm và người bản ngữ duyệt** (kiểm tra sự kiện ở các bài "Tìm lỗi": lịch sử, địa lí, khoa học, toán, động vật).
+- Tiêu chí chấp nhận nội dung có test tự động (ADD-01 ≥1/3 bài RESP mỗi cấp, ADD-02 ≥6 bài "Tìm lỗi" cấp 2, camera cấp 1 phải gắn cờ).
+

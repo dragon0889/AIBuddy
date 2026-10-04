@@ -5,7 +5,7 @@ import { defaultConfig, type AppContext } from "./context.ts";
 import { createPgDb, createPgliteDb, type Db } from "./db/index.ts";
 import { migrate } from "./db/migrations.ts";
 import { Hasher, KeyService } from "./lib/crypto.ts";
-import { MockOtpSender } from "./lib/otp.ts";
+import { MockOtpSender, WebhookOtpSender, type OtpSender } from "./lib/otp.ts";
 import { RateLimiter } from "./lib/rate-limit.ts";
 import { ContentStore } from "./modules/content.ts";
 import { loadPublished } from "./modules/admin.ts";
@@ -21,7 +21,11 @@ const need = (k: string): string => {
 // Khóa: production bắt buộc đặt từ biến môi trường/KMS; dev dùng khóa ngẫu nhiên (dữ liệu dev mất khi khởi động lại – chấp nhận).
 const kek = process.env.AIBUDDY_MASTER_KEY ? Buffer.from(need("AIBUDDY_MASTER_KEY"), "base64") : (need("AIBUDDY_MASTER_KEY"), randomBytes(32));
 const pepper = process.env.AIBUDDY_PEPPER ? Buffer.from(need("AIBUDDY_PEPPER"), "base64") : (need("AIBUDDY_PEPPER"), randomBytes(32));
-if (isProd && process.env.OTP_PROVIDER === "mock") throw new Error("OTP_PROVIDER=mock is not allowed in production");
+// Production bắt buộc có bộ gửi OTP thật; nếu không, thư xác minh/đồng ý sẽ không bao giờ tới phụ huynh.
+let otp: OtpSender;
+if (process.env.OTP_WEBHOOK_URL) otp = new WebhookOtpSender(process.env.OTP_WEBHOOK_URL, need("OTP_WEBHOOK_TOKEN"));
+else if (isProd) throw new Error("OTP_WEBHOOK_URL is required in production (mock OTP sender is dev-only)");
+else otp = new MockOtpSender();
 
 const db: Db = process.env.DATABASE_URL ? createPgDb(process.env.DATABASE_URL) : await createPgliteDb();
 await migrate(db);
@@ -32,7 +36,7 @@ const ctx: AppContext = {
   keys: new KeyService(db, kek, now),
   hasher: new Hasher(pepper),
   rate: new RateLimiter(now),
-  otp: new MockOtpSender(), // TODO: nhà cung cấp Email/SMS thật (Q: chưa chọn)
+  otp,
   content: new ContentStore(process.env.CONTENT_DIR ?? join(import.meta.dirname, "../../../content")).load(),
 };
 await loadPublished(ctx);

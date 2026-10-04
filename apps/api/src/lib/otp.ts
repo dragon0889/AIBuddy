@@ -51,3 +51,22 @@ export async function verifyOtp(ctx: AppContext, subjectId: string, purpose: Otp
   }
   await ctx.db.query("UPDATE otp_codes SET consumed_at=$2 WHERE id=$1", [row.id, now]);
 }
+
+/**
+ * Bộ gửi OTP thật qua webhook HTTPS của nhà cung cấp/relay tự chọn (nhà cung cấp Email/SMS chưa quyết – Q4).
+ * Gửi JSON { channel, to, code, purpose } kèm Bearer token. Bắt buộc ở production (xem main.ts).
+ */
+export class WebhookOtpSender implements OtpSender {
+  constructor(private url: string, private token: string, private timeoutMs = 8000) {
+    if (!/^https:\/\//.test(url) && !/^http:\/\/(127\.0\.0\.1|localhost)/.test(url)) throw new Error("OTP webhook must be https (or localhost for tests)");
+  }
+  async send(channel: "email" | "sms", to: string, code: string, purpose: OtpPurpose) {
+    const res = await fetch(this.url, {
+      method: "POST",
+      headers: { "content-type": "application/json", authorization: `Bearer ${this.token}` },
+      body: JSON.stringify({ channel, to, code, purpose }),
+      signal: AbortSignal.timeout(this.timeoutMs),
+    });
+    if (!res.ok) throw new AppError(502, "otp_delivery_failed");
+  }
+}

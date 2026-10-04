@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-04T00:15:37.830Z",
+  "note": "Chromium headless trên máy cloud; cache lạnh; mạng giả lập bằng CDP; chưa phải thiết bị/mạng thật",
+  "results": [
+    {
+      "network": "broadband (10 Mbps, RTT 40 ms)",
+      "page": "/play/home",
+      "medianMs": 421,
+      "maxMs": 425,
+      "transferKB": 140,
+      "budgetMs": 2000,
+      "withinBudget": true
+    },
+    {
+      "network": "broadband (10 Mbps, RTT 40 ms)",
+      "page": "/play/lesson?id=L2-RESP-02",
+      "medianMs": 368,
+      "maxMs": 373,
+      "transferKB": 131,
+      "budgetMs": 2000,
+      "withinBudget": true
+    },
+    {
+      "network": "slow 4G (1.6 Mbps, RTT 150 ms)",
+      "page": "/play/home",
+      "medianMs": 1498,
+      "maxMs": 1526,
+      "transferKB": 137,
+      "budgetMs": 2000,
+      "withinBudget": true
+    },
+    {
+      "network": "slow 4G (1.6 Mbps, RTT 150 ms)",
+      "page": "/play/lesson?id=L2-RESP-02",
+      "medianMs": 1484,
+      "maxMs": 1489,
+      "transferKB": 131,
+      "budgetMs": 2000,
+      "withinBudget": true
+    }
+  ]
+}

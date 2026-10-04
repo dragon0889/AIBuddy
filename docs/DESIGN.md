@@ -159,3 +159,13 @@ docs/            PLAN, DESIGN, LEARNING_OUTCOMES
 - Q1 (lưu model lên server), Q2 (trẻ <7 tuổi), Q3 (hosting tại VN) ảnh hưởng trực tiếp các mục 3.1, 3.6, 4, 7.
 - Chọn mô hình embedding và dung lượng tải về (ảnh hưởng thiết bị yếu): quyết ở Sprint 1.
 - Nhà cung cấp LLM và chính sách dữ liệu cho trẻ em: quyết trước Pha 2.
+
+---
+## Cập nhật sau khi triển khai (đọc phần này trước các mục trên khi có mâu thuẫn)
+- **Backend:** Fastify + SQL (không NestJS) – [ADR-0005](adr/0005-fastify-instead-of-nest.md). Module thực tế: `auth`, `family` (hồ sơ con, đồng ý, chuyển hồ sơ, giới hạn thời gian), `learning` (bài, tiến độ, XP/huy hiệu, đánh giá, báo cáo phụ huynh), `erasure`, `admin` (CMS, audit, báo cáo tuân thủ), `pilot`.
+- **Web:** proxy cùng origin, route theo query (`/play/lesson?id=…`), Service Worker – [ADR-0006](adr/0006-same-origin-proxy-static-routes-offline.md). Studio ML ở `/play/studio`, khối lệnh ở `/play/blocks`.
+- **Dữ liệu:** thêm `subject_keys` (khóa theo chủ thể → crypto-shredding), `usage_days`, `project_events`, `content_drafts`, `parent_feedback`; không có `classes`/`enrollments` (Pha 2). PII (email, SĐT, biệt danh, ngày sinh) mã hóa theo trường; `consent_events`/`audit_logs` bất biến bằng trigger.
+- **Đồng ý:** hồ sơ con do phụ huynh đã xác minh email tạo (không có đăng ký trẻ độc lập); trạng thái `PENDING_PARENT_CONSENT` → `ACTIVE`; hết hạn 7 ngày thì xóa.
+- **Không còn** endpoint `/auth/class-login`, `/classes`, `/assignments` (Pha 2).
+- API thực tế: xem `apps/api/src/modules/*.ts` và test tương ứng.
+

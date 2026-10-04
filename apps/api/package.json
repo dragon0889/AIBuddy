@@ -8,7 +8,8 @@
     "start": "tsx src/main.ts",
     "build": "tsc --noEmit",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:pg": "vitest run --fileParallelism=false"
   },
   "dependencies": {
     "@aibuddy/content": "workspace:*",

@@ -80,6 +80,22 @@ function ChildCard({ c, reload }: { c: Child; reload: () => void }) {
   );
 }
 
+function Feedback() {
+  const [ease, setEase] = useState(0);
+  const [comment, setComment] = useState("");
+  const [sent, setSent] = useState(false);
+  if (sent) return <p className="ok card" role="status">Cảm ơn bạn đã góp ý!</p>;
+  return (
+    <form className="card stack" onSubmit={async (e) => { e.preventDefault(); if (!ease) return; await post("/api/v1/feedback", { ease, comment: comment || undefined }); setSent(true); }}>
+      <h2>Góp ý cho chúng tôi</h2>
+      <fieldset><legend>Ứng dụng dễ dùng với bạn đến mức nào? (1 = rất khó, 5 = rất dễ)</legend>
+        <div className="row">{[1, 2, 3, 4, 5].map((n) => <label key={n} className="row" style={{ fontWeight: 400 }}><input type="radio" name="ease" checked={ease === n} onChange={() => setEase(n)} /> {n}</label>)}</div></fieldset>
+      <label>Ý kiến (không ghi thông tin cá nhân)<textarea rows={3} maxLength={500} value={comment} onChange={(e) => setComment(e.target.value)} /></label>
+      <button className="btn" disabled={!ease}>Gửi góp ý</button>
+    </form>
+  );
+}
+
 export default function Parent() {
   const { t } = useI18n();
   const router = useRouter();
@@ -116,6 +132,7 @@ export default function Parent() {
         {err && <p className="err" role="alert">{err}</p>}
         <button className="btn btn-primary">{t("create")}</button>
       </form>
+      <Feedback />
       <details className="card">
         <summary>{t("eraseAccount")}</summary>
         <button className="btn btn-danger" onClick={async () => { const pw = prompt("Nhập mật khẩu để xác nhận xóa toàn bộ tài khoản và dữ liệu của con:"); if (pw) { try { await post("/api/v1/account/erase", { password: pw }); router.push("/"); } catch { alert("Mật khẩu chưa đúng."); } } }}>{t("eraseAccount")}</button>

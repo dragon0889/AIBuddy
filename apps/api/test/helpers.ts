@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { randomBytes } from "node:crypto";
 import { buildApp } from "../src/app.ts";
 import { defaultConfig, type AppContext, type Config } from "../src/context.ts";
-import { createPgliteDb } from "../src/db/index.ts";
+import { createPgDb, createPgliteDb } from "../src/db/index.ts";
 import { migrate } from "../src/db/migrations.ts";
 import { Hasher, KeyService } from "../src/lib/crypto.ts";
 import { MockOtpSender } from "../src/lib/otp.ts";
@@ -13,7 +13,10 @@ import { ContentStore } from "../src/modules/content.ts";
 export const CONTENT_DIR = join(import.meta.dirname, "../../../content");
 
 export async function makeCtx(over: Partial<Config> = {}) {
-  const db = await createPgliteDb();
+  // Mặc định PGlite (nhanh, không cần dịch vụ). Đặt TEST_DATABASE_URL để chạy cùng bộ test trên PostgreSQL thật (pnpm test:pg).
+  const url = process.env.TEST_DATABASE_URL;
+  const db = url ? createPgDb(url) : await createPgliteDb();
+  if (url) await db.exec("DROP SCHEMA public CASCADE; CREATE SCHEMA public;");
   await migrate(db);
   const clock = { t: new Date("2026-10-05T08:00:00Z") };
   const now = () => new Date(clock.t);

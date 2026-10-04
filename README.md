@@ -1,38 +1,42 @@
 # AIBuddy
 
-Nền tảng giúp trẻ 6–14 tuổi **hiểu AI và biết dùng AI hiệu quả, an toàn**, triển khai đầu tiên **tại nhà** (phụ huynh là chủ tài khoản).
+Nền tảng giúp trẻ 6–15 tuổi **hiểu AI và biết dùng AI hiệu quả, an toàn**, triển khai đầu tiên **tại nhà** (phụ huynh là chủ tài khoản). Ảnh/âm thanh của trẻ **không rời thiết bị**.
+
+> **Trạng thái:** phần mềm MVP (Sprint 0–12) đã xây dựng và kiểm thử tự động. **Chưa làm:** pilot với gia đình thật, đo trên thiết bị/webcam thật, thử tải quy mô, triển khai production, duyệt pháp lý và sư phạm. Chi tiết trung thực: [`docs/IMPLEMENTATION_STATUS.md`](docs/IMPLEMENTATION_STATUS.md).
 
 ## Tài liệu
-- [`docs/PLAN.md`](docs/PLAN.md) – kế hoạch phát triển (MVP ~6 tháng, 13 sprint)
-- [`docs/DESIGN.md`](docs/DESIGN.md) – thiết kế cơ bản
-- [`docs/SRS_ADDENDUM.md`](docs/SRS_ADDENDUM.md) – phụ lục SRS (ADD-01…ADD-11, ưu tiên hơn SRS gốc khi xung đột)
-- [`docs/LEARNING_OUTCOMES.md`](docs/LEARNING_OUTCOMES.md) – mục tiêu học tập & đánh giá
-- [`docs/CURRICULUM_SOURCES.md`](docs/CURRICULUM_SOURCES.md) – nguồn giáo trình và lưu ý giấy phép
-- [`docs/BACKLOG.md`](docs/BACKLOG.md) – backlog Sprint 2–13; [`docs/adr/`](docs/adr), [`docs/security/THREAT_MODEL.md`](docs/security/THREAT_MODEL.md), [`docs/compliance/DPIA_v1.md`](docs/compliance/DPIA_v1.md)
-- [`docs/spikes/SPRINT1_REPORT.md`](docs/spikes/SPRINT1_REPORT.md) – kết quả spike TF.js và Scratch Blocks
-- `Thiết kế SRS App AI.docx` – SRS gốc
+- Kế hoạch & thiết kế: [`docs/PLAN.md`](docs/PLAN.md) · [`docs/DESIGN.md`](docs/DESIGN.md) · [`docs/BACKLOG.md`](docs/BACKLOG.md) · [`docs/adr/`](docs/adr)
+- Yêu cầu: `Thiết kế SRS App AI.docx` (gốc) + [`docs/SRS_ADDENDUM.md`](docs/SRS_ADDENDUM.md) (ADD-01…11, ưu tiên khi xung đột)
+- Sư phạm: [`docs/LEARNING_OUTCOMES.md`](docs/LEARNING_OUTCOMES.md) · [`docs/CURRICULUM_SOURCES.md`](docs/CURRICULUM_SOURCES.md)
+- Bảo mật/tuân thủ: [`docs/security/THREAT_MODEL.md`](docs/security/THREAT_MODEL.md) · [`docs/compliance/DPIA_v2.md`](docs/compliance/DPIA_v2.md) · [`docs/legal/PRIVACY_NOTICE_DRAFT.md`](docs/legal/PRIVACY_NOTICE_DRAFT.md)
+- Vận hành & đo đạc: [`docs/RUNBOOK.md`](docs/RUNBOOK.md) · [`docs/perf/PERFORMANCE.md`](docs/perf/PERFORMANCE.md) · [`docs/spikes/SPRINT1_REPORT.md`](docs/spikes/SPRINT1_REPORT.md) · [`docs/pilot/PILOT_PROTOCOL.md`](docs/pilot/PILOT_PROTOCOL.md)
 
-## Cấu trúc monorepo (pnpm workspace)
+## Cấu trúc monorepo (pnpm)
 ```
-apps/web          Next.js (bản khung)
-apps/api          NestJS (health + minh họa máy trạng thái consent)
-packages/shared   logic dùng chung: tính tuổi, máy trạng thái Dual Consent (có test)
-packages/content  schema (zod) cho bài học/outcome/rubric + validator CLI
-packages/ml-core  trích embedding (MobileNet) + huấn luyện đầu phân loại (TF.js), test rò rỉ tensor
-packages/ui       design tokens theo cấp độ (test WCAG, cỡ chữ, vùng chạm)
-content/lessons   3 bài mẫu: L1-RESP-01, L2-RESP-01 (Tìm lỗi của AI), L2-LRN-01
-content/outcomes  28 outcome (bản nháp, chờ chuyên gia sư phạm duyệt); content/rubrics: rubric dự án
+apps/api          Fastify + PostgreSQL (PGlite khi dev/test): auth, đồng ý kép, học tập, xóa dữ liệu, CMS, báo cáo
+apps/web          Next.js PWA: phụ huynh, trẻ (bài học, đánh giá, Xưởng dạy máy, khối lệnh), admin
+packages/shared   tính tuổi, máy trạng thái Dual Consent
+packages/content  schema bài học/outcome/đánh giá/rubric (zod) + validator
+packages/ml-core  trích embedding MobileNet + huấn luyện đầu phân loại (TF.js)
+packages/ui       design tokens (WCAG AA, cỡ chữ theo cấp, màu khối đạt AA)
+content/          25 bài, 28 outcome, 6 bài đánh giá, rubric, hướng dẫn phụ huynh (bản nháp chờ duyệt sư phạm)
+scripts/          e2e-app, e2e-blocks, bench-ml, perf-pages, load-api, copy-assets
 ```
 
-## Chạy
+## Chạy thử (dev)
 ```bash
 pnpm install
-pnpm typecheck && pnpm test
-pnpm --filter @aibuddy/content validate     # kiểm tra bài học trong content/lessons
-pnpm --filter @aibuddy/api dev              # http://localhost:3001/health
-pnpm --filter @aibuddy/web dev              # /spike/ml và /spike/blocks là trang spike Sprint 1
-pnpm e2e                                    # build web + E2E khối lệnh (cần Chromium)
-pnpm bench:ml                               # benchmark ML (cpu/wasm/webgl, giả lập CPU chậm)
+pnpm --filter @aibuddy/api dev      # :3001, PGlite trong bộ nhớ (dữ liệu mất khi tắt); OTP in ở GET /api/v1/dev/outbox
+pnpm --filter @aibuddy/web dev      # :3000 (đặt API_URL nếu API ở nơi khác)
 ```
+Đăng ký phụ huynh → lấy mã OTP từ `http://127.0.0.1:3001/api/v1/dev/outbox` (chỉ dev) → tạo hồ sơ con → đồng ý kép → “Cho con chơi”.
 
-Yêu cầu: Node ≥ 20, pnpm 10. Trạng thái: **Sprint 0 xong, Sprint 1 xong một phần** (chưa đo trên thiết bị/webcam thật). Chưa có DB, OTP, ML Studio hoàn chỉnh (Sprint 2–7).
+## Kiểm thử
+```bash
+pnpm typecheck && pnpm test                  # 89 test đơn vị/tích hợp (PGlite)
+TEST_DATABASE_URL=postgres://… pnpm --filter @aibuddy/api test:pg   # cùng bộ test trên PostgreSQL thật
+pnpm --filter @aibuddy/web build && node scripts/e2e-app.mjs        # E2E toàn luồng: camera giả, offline, riêng tư, axe (cần Chromium)
+node scripts/perf-pages.mjs ; node scripts/load-api.mjs             # đo tải trang / API
+pnpm audit --prod
+```
+Production: xem [`docs/RUNBOOK.md`](docs/RUNBOOK.md) (bắt buộc đặt `AIBUDDY_MASTER_KEY`, `AIBUDDY_PEPPER`, `OTP_WEBHOOK_URL`…). Dockerfile/compose mẫu **chưa build thử**.

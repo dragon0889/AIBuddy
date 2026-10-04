@@ -1,7 +1,7 @@
 # Kế hoạch phát triển – Nền tảng Giáo dục AI cho học sinh Tiểu học & THCS
 
 > Nguồn: `Thiết kế SRS App AI.docx` (IEEE 830 / ISO 29148). Tài liệu này phân tích SRS và đề xuất kế hoạch triển khai.
-> Trạng thái: **v0.4 – Sprint 0 xong, Sprint 1 xong một phần** (xem `docs/spikes/SPRINT1_REPORT.md`) – trước đó v0.3 – triển khai **tại nhà (phụ huynh là kênh chính)**; đã bổ sung các khoảng trống sư phạm (mục 3A); nguồn giáo trình: [`CURRICULUM_SOURCES.md`](CURRICULUM_SOURCES.md); phụ lục SRS: [`SRS_ADDENDUM.md`](SRS_ADDENDUM.md). Thiết kế cơ bản: [`DESIGN.md`](DESIGN.md); mục tiêu học tập & đánh giá: [`LEARNING_OUTCOMES.md`](LEARNING_OUTCOMES.md).
+> Trạng thái: **v0.5 – Sprint 0–12 đã triển khai phần mềm; Sprint 13 (pilot) chưa chạy** – xem [`IMPLEMENTATION_STATUS.md`](IMPLEMENTATION_STATUS.md). Trước đó: v0.4 – Sprint 0 xong, Sprint 1 xong một phần (xem `docs/spikes/SPRINT1_REPORT.md`) – trước đó v0.3 – triển khai **tại nhà (phụ huynh là kênh chính)**; đã bổ sung các khoảng trống sư phạm (mục 3A); nguồn giáo trình: [`CURRICULUM_SOURCES.md`](CURRICULUM_SOURCES.md); phụ lục SRS: [`SRS_ADDENDUM.md`](SRS_ADDENDUM.md). Thiết kế cơ bản: [`DESIGN.md`](DESIGN.md); mục tiêu học tập & đánh giá: [`LEARNING_OUTCOMES.md`](LEARNING_OUTCOMES.md).
 > Cần xác nhận các mục ở phần 8 trước khi bắt đầu Sprint 0.
 
 ## 1. Quyết định đã chốt
@@ -123,6 +123,23 @@ SRS gốc dạy *AI hoạt động thế nào* (AI literacy) nhưng chưa dạy 
 | **13** | Ổn định & pilot | **Pilot 10–20 gia đình, pre/post test + misconception survey (ADD-11)**, sửa lỗi, tài liệu vận hành, báo cáo tuân thủ NĐ13, báo cáo hiệu quả học tập |
 
 **Phân công gợi ý (3 người):** (A) Tech lead/backend + compliance; (B) frontend + lesson/gamification; (C) ML/Edge AI + block coding. Người thứ 4 (nếu có): UI/UX + nội dung sư phạm. Cần cố vấn sư phạm AI4K12 và pháp lý bán thời gian.
+
+## 6A. Trạng thái các sprint (tóm tắt – chi tiết ở `IMPLEMENTATION_STATUS.md`)
+| Sprint | Trạng thái | Ghi chú |
+|---|---|---|
+| 0–1 | ✔ / ◐ | Xem báo cáo Sprint 1 (chưa đo thiết bị thật) |
+| 2 Nền tảng & Auth | ✔ | Fastify + PostgreSQL (ADR-0005), RBAC, 2FA admin, audit bất biến, header bảo mật |
+| 3 Dual Consent | ✔ | Máy trạng thái + OTP + Privacy by Default + hết hạn 7 ngày |
+| 4 Lesson Engine | ✔ | 9 loại bước, TTS; **user testing với trẻ chưa làm** |
+| 5 Gamification + CMS | ✔ | XP quá trình, huy hiệu; CMS duyệt 2 người; 25 bài (cần duyệt sư phạm) |
+| 6–7 Studio & Trainer | ✔ | Camera (ảnh), trích đặc trưng lúc chụp, biểu đồ, "vì sao sai"; **chưa đo thiết bị/webcam thật** |
+| 8 Khối lệnh | ◐ | Scratch Blocks + khối ML; thông dịch tối giản |
+| 9 PRJ-02 + micro-quiz + Tìm lỗi AI | ✔ | 6 bài "Tìm lỗi", đánh giá, gợi ý bài ôn |
+| 10 Phụ huynh | ✔ | Dashboard, báo cáo tuần, Học cùng con |
+| 11 Erasure + onboarding | ✔ | Crypto-shredding; onboarding phụ huynh→con; **chưa có email tóm tắt tuần** |
+| 12 Offline/hiệu năng/bảo mật | ◐ | SW offline, tải trang đạt, audit sạch; **chưa pen-test, chưa thử tải 5k CCU** |
+| 13 Pilot | ✘ (công cụ sẵn sàng) | `pilot/PILOT_PROTOCOL.md`, xuất ẩn danh, chỉ số |
+
 
 ## 7. Chiến lược kiểm thử & tuân thủ
 

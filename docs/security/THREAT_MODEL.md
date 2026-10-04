@@ -34,3 +34,24 @@ Trẻ/phụ huynh (trình duyệt) ⇄ API ⇄ DB/Redis ⇄ nhà cung cấp Emai
 - [ ] Thêm `pnpm audit` và kiểm tra giấy phép vào CI.
 - [ ] Thêm header bảo mật (CSP, Permissions-Policy) khi có app thật (Sprint 2).
 - [ ] Pen-test cơ bản ở Sprint 12; rà soát lại bản này sau Sprint 3.
+
+---
+## Cập nhật trạng thái triển khai (sau khi xây dựng MVP phần mềm)
+
+| # | Trạng thái | Bằng chứng |
+|---|---|---|
+| T1 | **Đã giảm thiểu, kiểm chứng tự động** | CSP `connect-src 'self'`; model/WASM/Blockly tự host; `scripts/e2e-app.mjs` xác nhận không có request tới bên ngoài và không có POST chứa ảnh/base64 trong luồng camera giả. *Chưa kiểm với webcam thật.* |
+| T2 | Đã giảm thiểu | OTP 10 phút, 5 lần thử, giới hạn 3 mã/10 phút, băm mã; test `family.test.ts`. eKYC chưa có. |
+| T3 | Đã giảm thiểu | Chỉ phụ huynh đã xác minh email mới tạo hồ sơ con. |
+| T4 | Đã giảm thiểu | PIN scrypt, khóa 5 phút sau 5 lần sai, phiên trẻ hết hạn sau 15 phút không hoạt động; test. |
+| T5 | Đã giảm thiểu | `ownedChild` trả 404 cho hồ sơ không thuộc phụ huynh; test IDOR (`family.test.ts`, `learning.test.ts`). |
+| T6 | Phần lớn | Không có analytics bên thứ ba; log lỗi chỉ ghi thông điệp; **chưa có quét tự động log PII**. |
+| T7 | Đã giảm thiểu | Crypto-shredding + job + chứng từ; test. Quy tắc khôi phục sao lưu cần tuân thủ (RUNBOOK). |
+| T8 | Một phần | Nội dung bài render từ schema (không HTML tùy ý); header bảo mật; **CSP còn `unsafe-inline`/`unsafe-eval`** (cần cho TF.js/Blockly/Next) → cần siết bằng nonce khi có thể. Chưa pen-test. |
+| T9 | Đã giảm thiểu | 2FA TOTP (kiểm chứng theo vector RFC 6238), duyệt 2 người, audit; test `admin.test.ts`. |
+| T10 | Chưa áp dụng | Chưa có LLM (ADR-0003). |
+| T11 | Một phần | Rate limit trong bộ nhớ; đã đo tải cơ sở (`perf/PERFORMANCE.md`); chưa thử tải quy mô. |
+| T12 | Đã giảm thiểu | Giới hạn gửi OTP theo chủ thể; chưa có CAPTCHA/ngân sách SMS. |
+| T13 | Một phần | Xóa mô hình/cache bài khi thoát hồ sơ; hàng đợi đồng bộ còn lại trong localStorage (không nhạy cảm). |
+| T14 | Đã giảm thiểu một phần | `pnpm audit --prod` sạch (sau override `postcss`); chạy trong CI; mô hình tự host kèm NOTICE (chưa có hash kiểm tra). |
+**Phát hiện thêm khi xây dựng:** rate limit theo IP khi chạy sau proxy cần `trustProxy` + `x-forwarded-for` (đã chuyển tiếp ở route proxy; production bật `trustProxy`); thông báo lỗi đăng nhập thống nhất và luôn chạy `verifySecret` để tránh lộ email tồn tại qua thời gian phản hồi.

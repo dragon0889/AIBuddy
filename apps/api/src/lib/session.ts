@@ -41,7 +41,8 @@ export async function loadAuth(ctx: AppContext, req: FastifyRequest): Promise<vo
     }
     if (row.kind === "child" && slot !== "child") continue;
     if (row.kind !== "child" && slot !== "session") continue;
-    await ctx.db.query("UPDATE sessions SET last_seen_at=$2 WHERE token_hash=$1", [h, now]);
+    // Chỉ ghi last_seen khi đã quá 30 giây (giảm ghi DB trên mỗi request; độ phân giải đủ cho hết hạn do không hoạt động).
+    if (now.getTime() - new Date(row.last_seen_at).getTime() > 30_000) await ctx.db.query("UPDATE sessions SET last_seen_at=$2 WHERE token_hash=$1", [h, now]);
     req.auth[slot] = { kind: row.kind, userId: row.user_id, childId: row.child_id ?? undefined, tokenHash: h };
   }
 }

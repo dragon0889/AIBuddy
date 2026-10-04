@@ -16,6 +16,7 @@ function Console({ onLogout }: { onLogout: () => void }) {
   return (
     <div className="stack">
       <div className="row"><button className="btn" onClick={() => run(() => get("/api/v1/admin/compliance-report"))}>Báo cáo tuân thủ</button>
+        <button className="btn" onClick={() => run(() => get("/api/v1/admin/pilot-export"))}>Xuất dữ liệu pilot (ẩn danh)</button>
         <button className="btn" onClick={() => run(() => get("/api/v1/admin/audit-logs?limit=50"))}>Nhật ký kiểm toán</button>
         <button className="btn" onClick={() => run(() => post("/api/v1/admin/maintenance/run"))}>Chạy bảo trì (hết hạn/xóa)</button>
         <button className="btn" onClick={async () => { await post("/api/v1/auth/logout"); onLogout(); }}>Đăng xuất</button></div>

@@ -8,6 +8,7 @@ import { adminRoutes } from "./modules/admin.ts";
 import { authRoutes } from "./modules/auth.ts";
 import { familyRoutes } from "./modules/family.ts";
 import { learningRoutes } from "./modules/learning.ts";
+import { pilotRoutes } from "./modules/pilot.ts";
 
 export async function buildApp(ctx: AppContext): Promise<FastifyInstance> {
   const app = Fastify({ logger: false, trustProxy: ctx.config.isProd, bodyLimit: 256 * 1024 });
@@ -52,5 +53,6 @@ export async function buildApp(ctx: AppContext): Promise<FastifyInstance> {
   familyRoutes(app, ctx);
   learningRoutes(app, ctx);
   adminRoutes(app, ctx);
+  pilotRoutes(app, ctx);
   return app;
 }
